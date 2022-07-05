@@ -59,7 +59,7 @@ require('material').setup({
 		which_key = false,
 		sneak = false,
 		hop = false,
-		indent_blankline = false,
+		indent_blankline = true,
 		nvim_illuminate = false,
 	}
 })

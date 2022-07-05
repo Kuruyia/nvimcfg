@@ -133,4 +133,13 @@ return require('packer').startup(function()
             require('config.treesitter')
         end
     }
+
+    -- Indent blanklines
+    -- https://github.com/lukas-reineke/indent-blankline.nvim
+    use {
+        'lukas-reineke/indent-blankline.nvim',
+        config = function()
+            require('config.indent_blanklines')
+        end
+    }
 end)

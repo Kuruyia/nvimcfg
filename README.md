@@ -38,3 +38,4 @@ To list possible languages:
 - [Discord presence - Discord rich presence](https://github.com/andweeb/presence.nvim)
 - [Treesitter - Better syntax highlighting](https://github.com/nvim-treesitter/nvim-treesitter)
 - [Indent Blankline - Indentation guides](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [Illuminate - Same-token highlighting](https://github.com/RRethy/vim-illuminate)

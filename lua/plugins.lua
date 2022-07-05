@@ -142,4 +142,10 @@ return require('packer').startup(function()
             require('config.indent_blanklines')
         end
     }
+    
+    -- vim-illuminate
+    -- https://github.com/RRethy/vim-illuminate
+    use {
+        'RRethy/vim-illuminate'
+    }
 end)

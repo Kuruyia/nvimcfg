@@ -6,20 +6,25 @@ local lspconfig = require('lspconfig')
 if lspconfig.sumneko_lua then
     lspconfig.sumneko_lua.setup({
         capabilities = capabilities,
-
         settings = {
             Lua = {
                 diagnostics = {
                     globals = { 'vim' }
                 }
             }
-        }
+        },
+        on_attach = function(client)
+            require('illuminate').on_attach(client)
+        end
     })
 end
 
 -- C/C++ LSP server
 if lspconfig.clangd then
     lspconfig.clangd.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
+        on_attach = function(client)
+            require('illuminate').on_attach(client)
+        end
     })
 end

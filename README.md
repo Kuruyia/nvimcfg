@@ -1,6 +1,28 @@
 # Neovim configuration files
 My configuration files for Neovim.
 
+## Autocompletion usage
+To install an LSP server for a language, the following command must be used:
+```
+:LspInstall
+```
+
+The installed and available servers can be listed with this command:
+```
+:ListInstallInfo
+```
+
+## Treesitter usage
+To install syntax highlighting for a language:
+```
+:TSInstall <lang>
+```
+
+To list possible languages:
+```
+:TSInstallInfo
+```
+
 ## Plugins
 - [Packer - Plugin manager](https://github.com/wbthomason/packer.nvim)
 - [Material - Theme](https://github.com/marko-cerovac/material.nvim)

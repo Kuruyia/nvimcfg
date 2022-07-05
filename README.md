@@ -14,3 +14,4 @@ My configuration files for Neovim.
 - [Nvim cmp - Completion engine](https://github.com/hrsh7th/nvim-cmp)
 - [LSP Kind - Icons for LSP](https://github.com/onsails/lspkind.nvim)
 - [Discord presence - Discord rich presence](https://github.com/andweeb/presence.nvim)
+- [Treesitter - Better syntax highlighting](https://github.com/nvim-treesitter/nvim-treesitter)

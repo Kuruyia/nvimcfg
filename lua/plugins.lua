@@ -124,4 +124,13 @@ return require('packer').startup(function()
             require('config.discord_presence')
         end
     }
+
+    -- Treesitter
+    -- https://github.com/nvim-treesitter/nvim-treesitter
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        config = function ()
+            require('config.treesitter')
+        end
+    }
 end)

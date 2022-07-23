@@ -166,4 +166,14 @@ return require('packer').startup(function()
             require('config.alpha')
         end
     }
+
+    -- Todo Comments
+    -- https://github.com/folke/todo-comments.nvim
+    use {
+        'folke/todo-comments.nvim',
+        requires = {'nvim-lua/plenary.nvim'},
+        config = function()
+            require('config.todo_comments')
+        end
+    }
 end)

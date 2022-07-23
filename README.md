@@ -41,3 +41,4 @@ To list possible languages:
 - [Illuminate - Same-token highlighting](https://github.com/RRethy/vim-illuminate)
 - [Alpha - Custom greeter](https://github.com/goolord/alpha-nvim)
 - [Impatient - Faster startup time](https://github.com/lewis6991/impatient.nvim)
+- [Todo Comments - Todo highlighting and search](https://github.com/folke/todo-comments.nvim)

@@ -5,6 +5,15 @@ return require('packer').startup(function()
         'wbthomason/packer.nvim'
     }
 
+    -- Impatient
+    -- https://github.com/lewis6991/impatient.nvim
+    use {
+        'lewis6991/impatient.nvim',
+        config = function()
+           require('config.impatient')
+        end
+    }
+
     -- Material color scheme
     -- https://github.com/marko-cerovac/material.nvim
     use {

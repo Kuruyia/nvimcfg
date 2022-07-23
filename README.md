@@ -40,3 +40,4 @@ To list possible languages:
 - [Indent Blankline - Indentation guides](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [Illuminate - Same-token highlighting](https://github.com/RRethy/vim-illuminate)
 - [Alpha - Custom greeter](https://github.com/goolord/alpha-nvim)
+- [Impatient - Faster startup time](https://github.com/lewis6991/impatient.nvim)

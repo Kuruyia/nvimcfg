@@ -39,3 +39,4 @@ To list possible languages:
 - [Treesitter - Better syntax highlighting](https://github.com/nvim-treesitter/nvim-treesitter)
 - [Indent Blankline - Indentation guides](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [Illuminate - Same-token highlighting](https://github.com/RRethy/vim-illuminate)
+- [Alpha - Custom greeter](https://github.com/goolord/alpha-nvim)

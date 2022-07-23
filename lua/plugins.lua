@@ -148,4 +148,13 @@ return require('packer').startup(function()
     use {
         'RRethy/vim-illuminate'
     }
+
+    -- alpha-nvim
+    -- https://github.com/goolord/alpha-nvim
+    use {
+        'goolord/alpha-nvim',
+        config = function()
+            require('config.alpha')
+        end
+    }
 end)

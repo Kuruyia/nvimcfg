@@ -1,6 +1,26 @@
 # Neovim configuration files
 My configuration files for Neovim.
 
+## Installation
+To install those configuration files, simply clone this repository to `~/.config/nvim`:
+```
+git clone git@github.com:Kuruyia/nvimcfg.git ~/.config/nvim
+```
+
+You will finally need to [install the plugin manager](https://github.com/wbthomason/packer.nvim#quickstart) and, in NeoVim, run:
+```
+:PackerSync
+```
+
+## Reset
+In case of any problem, NeoVim can be reinitialized by deleting some directories:
+```
+rm -rf ~/.config/nvim/plugin/
+rm -rf ~/.local/share/nvim/
+```
+
+The plugin manager will need to be **reinstalled**.
+
 ## Autocompletion usage
 To install an LSP server for a language, the following command must be used:
 ```

@@ -23,3 +23,5 @@ vim.opt.belloff = 'all'
 vim.opt.mouse = 'a'
 
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
+vim.keymap.set('n', 'k', 'gj')
+vim.keymap.set('n', 'j', 'gk')

@@ -15,7 +15,7 @@ You will finally need to [install the plugin manager](https://github.com/wbthoma
 ## Reset
 In case of any problem, NeoVim can be reinitialized by deleting some directories:
 ```
-rm -rf ~/.config/nvim/plugin/
+rm -rf ~/.config/nvim/
 rm -rf ~/.local/share/nvim/
 ```
 

@@ -189,4 +189,13 @@ return require('packer').startup(function()
             require('config.todo_comments')
         end
     }
+
+    -- FTerm
+    -- https://github.com/numToStr/FTerm.nvim
+    use {
+        'numToStr/FTerm.nvim',
+        config = function ()
+            require('config.fterm')
+        end
+    }
 end)

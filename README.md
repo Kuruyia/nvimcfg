@@ -68,3 +68,4 @@ If there is a problem with the plugin, try:
 - [Alpha - Custom greeter](https://github.com/goolord/alpha-nvim)
 - [Impatient - Faster startup time](https://github.com/lewis6991/impatient.nvim)
 - [Todo Comments - Todo highlighting and search](https://github.com/folke/todo-comments.nvim)
+- [FTerm - Floating terminal](https://github.com/numToStr/FTerm.nvim)

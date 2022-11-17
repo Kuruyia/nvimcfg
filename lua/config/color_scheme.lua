@@ -1,5 +1,6 @@
 -- Color scheme
 vim.g.material_style = 'palenight'
+
 require('material').setup({
     contrast = {
         terminal = false, -- Enable contrast for the built-in terminal
@@ -20,22 +21,21 @@ require('material').setup({
     },
 
     plugins = { -- Here, you can disable(set to false) plugins that you don't use or don't want to apply the theme to
-        -- trouble,
-        nvim_cmp,
-        -- neogit,
-        gitsigns,
-        -- git_gutter,
-        telescope,
-        -- nvim_tree,
-        -- sidebar_nvim,
-        -- lsp_saga,
-        -- nvim_dap,
-        -- nvim_navic,
-        -- which_key,
-        -- sneak,
-        -- hop,
-        indent_blankline,
-        -- nvim_illuminate,
+        -- "dap",
+        -- "dashboard",
+        "gitsigns",
+        -- "hop",
+        "indent-blankline",
+        -- "lspsaga",
+        -- "mini",
+        -- "neogit",
+        "nvim-cmp",
+        -- "nvim-navic",
+        -- "nvim-tree",
+        -- "sneak",
+        "telescope",
+        -- "trouble",
+        -- "which-key",
     },
 
     disable = {

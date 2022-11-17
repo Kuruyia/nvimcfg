@@ -4,6 +4,7 @@ vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartindent = true
 vim.opt.number = true
+vim.opt.relativenumber = true
 vim.opt.title = true
 vim.opt.titlestring = '%r%m %y %t - Neovim'
 vim.opt.ruler = true

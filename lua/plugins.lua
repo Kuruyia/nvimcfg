@@ -82,7 +82,7 @@ return require('packer').startup(function()
             require('config.autopairs')
         end
     }
-    
+
     -- Mason
     -- https://github.com/williamboman/mason.nvim#requirements
     use {
@@ -164,7 +164,7 @@ return require('packer').startup(function()
             require('config.indent_blanklines')
         end
     }
-    
+
     -- vim-illuminate
     -- https://github.com/RRethy/vim-illuminate
     use {

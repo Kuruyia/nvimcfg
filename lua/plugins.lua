@@ -82,14 +82,26 @@ return require('packer').startup(function()
             require('config.autopairs')
         end
     }
+    
+    -- Mason
+    -- https://github.com/williamboman/mason.nvim#requirements
+    use {
+        'williamboman/mason.nvim',
+        config = function()
+            require('config.mason')
+        end
+    }
 
     -- LSP
+    -- https://github.com/williamboman/mason-lspconfig.nvim
     -- https://github.com/neovim/nvim-lspconfig
-    -- https://github.com/williamboman/nvim-lsp-installer/
     use {
-        'williamboman/nvim-lsp-installer',
+        'williamboman/mason-lspconfig.nvim',
+        requires = {
+            'williamboman/mason.nvim'
+        },
         config = function()
-            require('config.lsp_installer')
+            require('config.mason_lspconfig')
         end
     }
 

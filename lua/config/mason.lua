@@ -1,5 +1,5 @@
--- LSP Installer
-require('nvim-lsp-installer').setup({
+-- Mason
+require('mason').setup({
     ui = {
         icons = {
             server_installed = '✓',

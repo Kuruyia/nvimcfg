@@ -43,6 +43,11 @@ To list possible languages:
 :TSInstallInfo
 ```
 
+If there is a problem with the plugin, try:
+```
+:TSUpdate
+```
+
 ## Plugins
 - [Packer - Plugin manager](https://github.com/wbthomason/packer.nvim)
 - [Material - Theme](https://github.com/marko-cerovac/material.nvim)

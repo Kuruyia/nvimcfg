@@ -1,4 +1,6 @@
 -- Color scheme
+local colors = require('material.colors')
+
 vim.g.material_style = 'palenight'
 
 require('material').setup({
@@ -8,6 +10,7 @@ require('material').setup({
         floating_windows = false, -- Enable contrast for floating windows
         cursor_line = false, -- Enable darker background for the cursor line
         non_current_windows = false, -- Enable darker background for non-current windows
+        filetypes = {}, -- Specify which filetypes get the contrasted (darker) background
     },
 
     styles = { -- Give comments style such as bold, italic, underline etc.
@@ -56,6 +59,7 @@ require('material').setup({
     async_loading = true, -- Load parts of the theme asyncronously for faster startup (turned on by default)
 
     custom_highlights = {
+        LineNr = { fg = '#676E95' },
         LspReferenceText = { underline = true }
     }, -- Overwrite highlights with your own
 

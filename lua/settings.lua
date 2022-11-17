@@ -1,4 +1,4 @@
--- Settings
+-- Options
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 vim.opt.ignorecase = true
@@ -23,7 +23,9 @@ vim.opt.updatetime = 100
 vim.opt.belloff = 'all'
 vim.opt.mouse = 'a'
 
+-- Keymaps
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
+
 vim.keymap.set('n', 'k', 'gj')
 vim.keymap.set('n', 'j', 'gk')
 vim.keymap.set('v', 'k', 'gj')

@@ -151,7 +151,7 @@ return require('packer').startup(function()
     -- https://github.com/nvim-treesitter/nvim-treesitter
     use {
         'nvim-treesitter/nvim-treesitter',
-        config = function ()
+        config = function()
             require('config.treesitter')
         end
     }
@@ -194,8 +194,18 @@ return require('packer').startup(function()
     -- https://github.com/numToStr/FTerm.nvim
     use {
         'numToStr/FTerm.nvim',
-        config = function ()
+        config = function()
             require('config.fterm')
+        end
+    }
+
+    -- Tree
+    -- https://github.com/nvim-tree/nvim-tree.lua
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {'nvim-tree/nvim-web-devicons'},
+        config = function()
+            require('config.tree')
         end
     }
 end)

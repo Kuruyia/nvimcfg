@@ -69,3 +69,4 @@ If there is a problem with the plugin, try:
 - [Impatient - Faster startup time](https://github.com/lewis6991/impatient.nvim)
 - [Todo Comments - Todo highlighting and search](https://github.com/folke/todo-comments.nvim)
 - [FTerm - Floating terminal](https://github.com/numToStr/FTerm.nvim)
+- [Tree - Sidebar file explorer](https://github.com/nvim-tree/nvim-tree.lua)

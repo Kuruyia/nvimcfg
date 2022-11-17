@@ -55,7 +55,9 @@ require('material').setup({
 
     async_loading = true, -- Load parts of the theme asyncronously for faster startup (turned on by default)
 
-    custom_highlights = {}, -- Overwrite highlights with your own
+    custom_highlights = {
+        LspReferenceText = { underline = true }
+    }, -- Overwrite highlights with your own
 
     contrast_filetypes = { -- Specify which filetypes get the contrasted (darker) background
         'terminal', -- Darker terminal background

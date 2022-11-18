@@ -1,4 +1,7 @@
 return require('packer').startup(function()
+    -- Get nvim version
+    local version = vim.version()
+
     -- Packer can manage itself
     -- https://github.com/wbthomason/packer.nvim
     use {
@@ -182,8 +185,14 @@ return require('packer').startup(function()
 
     -- Todo Comments
     -- https://github.com/folke/todo-comments.nvim
+    local todo_comments_branch = nil
+    if version.major == 0 and version.minor < 8 then
+        todo_comments_branch = 'neovim-pre-0.8.0'
+    end
+
     use {
         'folke/todo-comments.nvim',
+        branch = todo_comments_branch,
         requires = {'nvim-lua/plenary.nvim'},
         config = function()
             require('config.todo_comments')

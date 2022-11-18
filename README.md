@@ -38,6 +38,7 @@ The following language servers are configured:
 - [ltex - LanguageTool language server for LaTeX and Markdown](https://github.com/valentjn/ltex-ls)
 - [texlab - (La)TeX completion engine](https://github.com/latex-lsp/texlab)
 - [tsserver - TypeScript and JavaScript language server](https://github.com/theia-ide/typescript-language-server)
+- [vuels - Vuejs language server](https://github.com/vuejs/vetur/tree/master/server)
 
 ## Treesitter usage
 To install syntax highlighting for a language:

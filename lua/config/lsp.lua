@@ -54,3 +54,11 @@ if lspconfig.tsserver then
         on_attach = on_attach
     })
 end
+
+-- Vuejs
+if lspconfig.vuels then
+    lspconfig.vuels.setup({
+        capabilities = capabilities,
+        on_attach = on_attach
+    })
+end

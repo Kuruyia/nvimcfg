@@ -39,3 +39,10 @@ if lspconfig.ltex then
         on_attach = on_attach
     })
 end
+
+if lspconfig.texlab then
+    lspconfig.texlab.setup({
+        capabilities = capabilities,
+        on_attach = on_attach
+    })
+end

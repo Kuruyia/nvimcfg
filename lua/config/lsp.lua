@@ -2,6 +2,13 @@
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspconfig = require('lspconfig')
 
+-- Attach handler
+local on_attach = function(client)
+    require('illuminate').on_attach(client)
+end
+
+-- For a list of LSP servers: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+
 -- Lua LSP server
 if lspconfig.sumneko_lua then
     lspconfig.sumneko_lua.setup({
@@ -13,9 +20,7 @@ if lspconfig.sumneko_lua then
                 }
             }
         },
-        on_attach = function(client)
-            require('illuminate').on_attach(client)
-        end
+        on_attach = on_attach
     })
 end
 
@@ -23,8 +28,14 @@ end
 if lspconfig.clangd then
     lspconfig.clangd.setup({
         capabilities = capabilities,
-        on_attach = function(client)
-            require('illuminate').on_attach(client)
-        end
+        on_attach = on_attach
+    })
+end
+
+-- LaTeX / Markdown
+if lspconfig.ltex then
+    lspconfig.ltex.setup({
+        capabilities = capabilities,
+        on_attach = on_attach
     })
 end

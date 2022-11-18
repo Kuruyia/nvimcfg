@@ -35,8 +35,9 @@ The installed and available servers can be listed with this command:
 The following language servers are configured:
 - [clangd - C++ language server](https://clangd.llvm.org/)
 - [sumneko_lua - Lua language server](https://github.com/sumneko/lua-language-server)
-- [texlab - (La)TeX completion engine](https://github.com/latex-lsp/texlab)
 - [ltex - LanguageTool language server for LaTeX and Markdown](https://github.com/valentjn/ltex-ls)
+- [texlab - (La)TeX completion engine](https://github.com/latex-lsp/texlab)
+- [tsserver - TypeScript and JavaScript language server](https://github.com/theia-ide/typescript-language-server)
 
 ## Treesitter usage
 To install syntax highlighting for a language:

@@ -46,3 +46,11 @@ if lspconfig.texlab then
         on_attach = on_attach
     })
 end
+
+-- TypeScript / JavaScript
+if lspconfig.tsserver then
+    lspconfig.tsserver.setup({
+        capabilities = capabilities,
+        on_attach = on_attach
+    })
+end

@@ -78,3 +78,4 @@ If there is a problem with the plugin, try:
 - [Todo Comments - Todo highlighting and search](https://github.com/folke/todo-comments.nvim)
 - [FTerm - Floating terminal](https://github.com/numToStr/FTerm.nvim)
 - [Tree - Sidebar file explorer](https://github.com/nvim-tree/nvim-tree.lua)
+- [Trouble - Pretty list for showing LSP stuff](https://github.com/folke/trouble.nvim)

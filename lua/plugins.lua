@@ -217,4 +217,13 @@ return require('packer').startup(function()
             require('config.tree')
         end
     }
+
+    -- Trouble
+    -- https://github.com/folke/trouble.nvim
+    use {
+        'folke/trouble.nvim',
+        config = function()
+            require('config.trouble')
+        end
+    }
 end)

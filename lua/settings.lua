@@ -22,6 +22,7 @@ vim.opt.signcolumn = 'yes'
 vim.opt.updatetime = 100
 vim.opt.belloff = 'all'
 vim.opt.mouse = 'a'
+vim.opt.scrolloff = 8
 
 -- Keymaps
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')

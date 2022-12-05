@@ -1,5 +1,10 @@
 -- Telescope
 require('telescope').setup {
+  defaults = {
+    file_ignore_patterns = {
+      "node_modules"
+    }
+  },
   extensions = {
     fzf = {
       fuzzy = true,                    -- false will only do exact matching

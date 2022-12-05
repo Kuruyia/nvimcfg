@@ -7,6 +7,11 @@ To install those configuration files, simply clone this repository to `~/.config
 git clone git@github.com:Kuruyia/nvimcfg.git ~/.config/nvim
 ```
 
+Then, install some dependencies:
+```
+# pacman -S cmake base-devel fd ripgrep
+```
+
 You will finally need to [install the plugin manager](https://github.com/wbthomason/packer.nvim#quickstart) and, in NeoVim, run:
 ```
 :PackerSync

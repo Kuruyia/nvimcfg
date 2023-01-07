@@ -22,7 +22,12 @@ cmp.setup({
         { name = 'vsnip' }, -- For vsnip users.
     },
     {
-        { name = 'buffer' },
+        {
+            name = 'buffer',
+            option = {
+                keyword_pattern = [[\%(\k*\%([-.]\k*\)\+\|\k\+\)]],
+            }
+        },
     }),
     view = {
         entries = { name = 'custom', selection_order = 'near_cursor' }

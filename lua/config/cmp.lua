@@ -25,7 +25,7 @@ cmp.setup({
         {
             name = 'buffer',
             option = {
-                keyword_pattern = [[\%(\k*\%([-.]\k*\)\+\|\k\+\)]],
+                keyword_pattern = [[\%(\k*\%([-.]\k\+\)\+\|\k\+\)]],
             }
         },
     }),

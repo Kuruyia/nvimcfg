@@ -31,3 +31,14 @@ vim.keymap.set('n', 'k', 'gj')
 vim.keymap.set('n', 'j', 'gk')
 vim.keymap.set('v', 'k', 'gj')
 vim.keymap.set('v', 'j', 'gk')
+
+-- Autocmds
+local clear_trailing_whitespaces = function()
+    local cursor_pos = vim.api.nvim_win_get_cursor(0)
+    vim.cmd([[silent! :%s/\s\+$//e]])
+    vim.api.nvim_win_set_cursor(0, cursor_pos)
+end
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+    callback = clear_trailing_whitespaces
+})

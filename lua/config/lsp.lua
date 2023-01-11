@@ -62,3 +62,11 @@ if lspconfig.vuels then
         on_attach = on_attach
     })
 end
+
+-- Python
+if lspconfig.pyright then
+    lspconfig.pyright.setup({
+        capabilities = capabilities,
+        on_attach = on_attach
+    })
+end

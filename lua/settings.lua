@@ -32,6 +32,8 @@ vim.keymap.set('n', 'j', 'gk')
 vim.keymap.set('v', 'k', 'gj')
 vim.keymap.set('v', 'j', 'gk')
 
+vim.keymap.set('n', '<C-l>', '<CMD>nohl<CR>')
+
 -- Autocmds
 local clear_trailing_whitespaces = function()
     local cursor_pos = vim.api.nvim_win_get_cursor(0)

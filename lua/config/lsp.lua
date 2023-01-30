@@ -70,3 +70,11 @@ if lspconfig.pyright then
         on_attach = on_attach
     })
 end
+
+-- Golang
+if lspconfig.gopls then
+    lspconfig.gopls.setup({
+        capabilities = capabilities,
+        on_attach = on_attach
+    })
+end

@@ -45,6 +45,7 @@ The following language servers are configured:
 - [tsserver - TypeScript and JavaScript language server](https://github.com/theia-ide/typescript-language-server)
 - [vuels - Vuejs language server](https://github.com/vuejs/vetur/tree/master/server)
 - [pyright - Python language server](https://github.com/microsoft/pyright)
+- [gopls - Golang language server](https://github.com/golang/tools/tree/master/gopls)
 
 ## Treesitter usage
 To install syntax highlighting for a language:

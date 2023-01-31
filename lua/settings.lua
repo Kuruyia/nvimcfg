@@ -36,6 +36,16 @@ vim.keymap.set('n', '<C-l>', '<CMD>nohl<CR>')
 
 -- Autocmds
 local clear_trailing_whitespaces = function()
+    -- Exclude some file types
+    local excluded_filetypes = {'markdown'}
+
+    for k, v in pairs(excluded_filetypes) do
+        if vim.bo.filetype == v then
+            return
+        end
+    end
+
+    -- Clear the trailing whitespaces
     local cursor_pos = vim.api.nvim_win_get_cursor(0)
     vim.cmd([[silent! :%s/\s\+$//e]])
     vim.api.nvim_win_set_cursor(0, cursor_pos)

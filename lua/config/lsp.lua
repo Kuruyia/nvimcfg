@@ -78,3 +78,11 @@ if lspconfig.gopls then
         on_attach = on_attach
     })
 end
+
+-- Terraform
+if lspconfig.terraformls then
+    lspconfig.terraformls.setup({
+        capabilities = capabilities,
+        on_attach = on_attach
+    })
+end

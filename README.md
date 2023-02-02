@@ -46,6 +46,7 @@ The following language servers are configured:
 - [vuels - Vuejs language server](https://github.com/vuejs/vetur/tree/master/server)
 - [pyright - Python language server](https://github.com/microsoft/pyright)
 - [gopls - Golang language server](https://github.com/golang/tools/tree/master/gopls)
+- [terraformls - Terraform language server](https://github.com/hashicorp/terraform-ls)
 
 ## Treesitter usage
 To install syntax highlighting for a language:

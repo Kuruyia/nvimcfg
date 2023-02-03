@@ -33,6 +33,15 @@ if lspconfig.clangd then
 end
 
 -- LaTeX / Markdown
+local preview_executable = 'zathura'
+local preview_args = {
+    '--synctex-editor-command',
+    vim.fn.stdpath('data')..[[/bin/nvim-texlabconfig -file '%{input}' -line %{line}]],
+    '--synctex-forward',
+    '%l:1:%f',
+    '%p',
+}
+
 if lspconfig.ltex then
     lspconfig.ltex.setup({
         capabilities = capabilities,
@@ -43,7 +52,19 @@ end
 if lspconfig.texlab then
     lspconfig.texlab.setup({
         capabilities = capabilities,
-        on_attach = on_attach
+        on_attach = on_attach,
+        settings = {
+            texlab = {
+                build = {
+                    forwardSearchAfter = true,
+                    onSave = true
+                },
+                forwardSearch = {
+                    executable = preview_executable,
+                    args = preview_args
+                }
+            }
+        }
     })
 end
 

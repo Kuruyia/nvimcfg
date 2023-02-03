@@ -27,7 +27,7 @@ return require('packer').startup(function()
     }
 
     -- Lualine
-    -- https://github.com/nvim-lualine/lualine.nvim 
+    -- https://github.com/nvim-lualine/lualine.nvim
     use {
         'nvim-lualine/lualine.nvim',
         requires = {
@@ -226,4 +226,15 @@ return require('packer').startup(function()
             require('config.trouble')
         end
     }
+
+    -- nvim-texlabconfig
+    -- https://github.com/f3fora/nvim-texlabconfig
+    use({
+        'f3fora/nvim-texlabconfig',
+        config = function()
+            require('config.texlabconfig')
+        end,
+        ft = { 'tex', 'bib' },
+        run = 'go build -o '..vim.fn.stdpath('data')..'/bin/'
+    })
 end)

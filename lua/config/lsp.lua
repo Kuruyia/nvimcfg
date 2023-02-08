@@ -33,14 +33,19 @@ if lspconfig.clangd then
 end
 
 -- LaTeX / Markdown
-local preview_executable = 'zathura'
-local preview_args = {
-    '--synctex-editor-command',
-    vim.fn.stdpath('data')..[[/bin/nvim-texlabconfig -file '%{input}' -line %{line}]],
-    '--synctex-forward',
-    '%l:1:%f',
-    '%p',
-}
+local preview_executable
+local preview_args
+
+if (vim.loop.os_uname().sysname == "Linux") then
+    preview_executable = 'zathura'
+    preview_args = {
+        '--synctex-editor-command',
+        vim.fn.stdpath('data')..[[/bin/nvim-texlabconfig -file '%{input}' -line %{line}]],
+        '--synctex-forward',
+        '%l:1:%f',
+        '%p',
+    }
+end
 
 if lspconfig.ltex then
     lspconfig.ltex.setup({

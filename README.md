@@ -1,4 +1,4 @@
-# Neovim configuration files
+41k Neovim configuration files
 My configuration files for Neovim.
 
 ## Installation
@@ -39,7 +39,7 @@ The installed and available servers can be listed with this command:
 
 The following language servers are configured:
 - [clangd - C++ language server](https://clangd.llvm.org/)
-- [sumneko_lua - Lua language server](https://github.com/sumneko/lua-language-server)
+- [lua_ls - Lua language server](https://github.com/luals/lua-language-server)
 - [ltex - LanguageTool language server for LaTeX and Markdown](https://github.com/valentjn/ltex-ls)
 - [texlab - (La)TeX completion engine](https://github.com/latex-lsp/texlab)
 - [tsserver - TypeScript and JavaScript language server](https://github.com/theia-ide/typescript-language-server)

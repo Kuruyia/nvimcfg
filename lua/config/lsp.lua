@@ -10,17 +10,34 @@ end
 -- For a list of LSP servers: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 
 -- Lua LSP server
-if lspconfig.sumneko_lua then
-    lspconfig.sumneko_lua.setup({
-        capabilities = capabilities,
-        settings = {
-            Lua = {
-                diagnostics = {
-                    globals = { 'vim' }
-                }
-            }
+if lspconfig.lua_ls then
+    local lua_ls_settings = {
+        Lua = {
+            telemetry = {
+                enable = false,
+            },
         },
-        on_attach = on_attach
+    }
+
+    -- Add nvim settings if cwd is ~/.config/nvim/
+    if vim.fn.getcwd() == vim.fn.stdpath('config') then
+        lua_ls_settings.Lua.runtime = {
+            version = 'LuaJIT'
+        }
+
+        lua_ls_settings.Lua.diagnostics = {
+            globals = {'vim'}
+        }
+
+        lua_ls_settings.Lua.workspace = {
+            library = vim.api.nvim_get_runtime_file('', true),
+        }
+    end
+
+    lspconfig.lua_ls.setup({
+        capabilities = capabilities,
+        on_attach = on_attach,
+        settings = lua_ls_settings
     })
 end
 

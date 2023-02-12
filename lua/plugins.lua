@@ -21,6 +21,7 @@ return require('packer').startup(function()
     -- https://github.com/marko-cerovac/material.nvim
     use {
         'marko-cerovac/material.nvim',
+        after = 'lualine.nvim',
         config = function()
             require('config.color_scheme')
         end
@@ -63,17 +64,6 @@ return require('packer').startup(function()
         },
         config = function()
             require('config.telescope')
-        end
-    }
-
-    -- Bufferline
-    -- https://github.com/akinsho/bufferline.nvim
-    use {
-        'akinsho/bufferline.nvim',
-        tag = 'v2.*',
-        requires = 'kyazdani42/nvim-web-devicons',
-        config = function()
-            require('config.bufferline')
         end
     }
 

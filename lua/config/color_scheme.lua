@@ -60,7 +60,11 @@ require('material').setup({
 
     custom_highlights = {
         LineNr = { fg = '#676E95' },
-        LspReferenceText = { underline = true }
+        LspReferenceText = { underline = true },
+        lualine_buffers_active = {
+            fg = '#AB47BC',
+            italic = true
+        }
     }, -- Overwrite highlights with your own
 
     contrast_filetypes = { -- Specify which filetypes get the contrasted (darker) background

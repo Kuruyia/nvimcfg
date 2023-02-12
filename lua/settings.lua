@@ -37,6 +37,9 @@ vim.keymap.set('v', 'j', 'gk')
 
 vim.keymap.set('n', '<C-l>', '<CMD>nohl<CR>')
 
+vim.keymap.set('n', 'gb', '<CMD>bnext<CR>')
+vim.keymap.set('n', 'gB', '<CMD>bprevious<CR>')
+
 -- Autocmds
 local clear_trailing_whitespaces = function()
     -- Exclude some file types

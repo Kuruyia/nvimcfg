@@ -1,4 +1,4 @@
-41k Neovim configuration files
+# Neovim configuration files
 My configuration files for Neovim.
 
 ## Installation
@@ -70,7 +70,6 @@ If there is a problem with the plugin, try:
 - [Lualine - Status line manager](https://github.com/nvim-lualine/lualine.nvim)
 - [Git signs - Git gutter signs](https://github.com/lewis6991/gitsigns.nvim)
 - [Telescope - Fuzzy finder](https://github.com/nvim-telescope/telescope.nvim)
-- [Bufferline - Buffer line manager](https://github.com/akinsho/bufferline.nvim)
 - [Autopairs - Automatically closes pairs](https://github.com/windwp/nvim-autopairs)
 - [LSP Config - Configures the LSP client](https://github.com/neovim/nvim-lspconfig)
 - [Mason - Easy installer for editor tooling](https://github.com/williamboman/mason.nvim)

@@ -1,11 +1,23 @@
 -- FTerm
-require('FTerm').setup({
+local fterm = require('FTerm')
+
+fterm.setup({
     border = 'rounded'
 })
 
 -- Keymap
 vim.keymap.set('n', ',', '<CMD>lua require("FTerm").toggle()<CR>')
 
+local esc_close_fterm = function()
+    if vim.bo.filetype ~= 'FTerm' then
+        return
+    end
+
+    fterm.close()
+end
+
+vim.keymap.set('n', '<Esc>', esc_close_fterm)
+
 -- Vim commands
-vim.api.nvim_create_user_command('FTermExit', require('FTerm').exit, { bang = true })
-vim.api.nvim_create_user_command('FTermToggle', require('FTerm').toggle, { bang = true })
+vim.api.nvim_create_user_command('FTermExit', fterm.exit, { bang = true })
+vim.api.nvim_create_user_command('FTermToggle', fterm.toggle, { bang = true })

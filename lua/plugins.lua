@@ -21,7 +21,7 @@ return require('packer').startup(function()
     -- https://github.com/marko-cerovac/material.nvim
     use {
         'marko-cerovac/material.nvim',
-        after = 'lualine.nvim',
+        after = 'nvim-lualine/lualine.nvim',
         config = function()
             require('config.color_scheme')
         end
@@ -152,6 +152,7 @@ return require('packer').startup(function()
     -- https://github.com/lukas-reineke/indent-blankline.nvim
     use {
         'lukas-reineke/indent-blankline.nvim',
+        after = 'nvim-treesitter/nvim-treesitter',
         config = function()
             require('config.indent_blanklines')
         end

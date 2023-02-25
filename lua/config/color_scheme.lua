@@ -34,10 +34,10 @@ require('material').setup({
         -- "neogit",
         "nvim-cmp",
         -- "nvim-navic",
-        -- "nvim-tree",
+        "nvim-tree",
         -- "sneak",
         "telescope",
-        -- "trouble",
+        "trouble",
         -- "which-key",
     },
 
@@ -64,7 +64,8 @@ require('material').setup({
         lualine_buffers_active = {
             fg = '#AB47BC',
             italic = true
-        }
+        },
+        IndentBlanklineContextChar = { fg = '#AB47BC' },
     }, -- Overwrite highlights with your own
 
     contrast_filetypes = { -- Specify which filetypes get the contrasted (darker) background

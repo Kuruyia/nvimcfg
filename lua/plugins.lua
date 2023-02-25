@@ -226,4 +226,13 @@ return require('packer').startup(function()
         ft = { 'tex', 'bib' },
         run = 'go build -o '..vim.fn.stdpath('data')..'/bin/'
     })
+
+    -- :GuessIndent
+    -- https://github.com/NMAC427/guess-indent.nvim
+    use {
+        'nmac427/guess-indent.nvim',
+        config = function()
+            require('config.guess_indent')
+        end,
+    }
 end)

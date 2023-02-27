@@ -47,6 +47,7 @@ The following language servers are configured:
 - [pyright - Python language server](https://github.com/microsoft/pyright)
 - [gopls - Golang language server](https://github.com/golang/tools/tree/master/gopls)
 - [terraformls - Terraform language server](https://github.com/hashicorp/terraform-ls)
+- [rust_analyzer - Rust language server](https://github.com/rust-analyzer/rust-analyzer)
 
 ## Treesitter usage
 To install syntax highlighting for a language:

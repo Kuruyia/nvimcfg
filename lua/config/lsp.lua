@@ -129,3 +129,11 @@ if lspconfig.terraformls then
         on_attach = on_attach
     })
 end
+
+-- Rust
+if lspconfig.rust_analyzer then
+    lspconfig.rust_analyzer.setup({
+        capabilities = capabilities,
+        on_attach = on_attach
+    })
+end

@@ -65,6 +65,7 @@ require('material').setup({
             italic = true
         },
         IndentBlanklineContextChar = { fg = '#AB47BC' },
+        PmenuThumb = { fg = '#A6ACCD', bg = '#676E95' },
 
         NavicIconsFile          = { fg = require('material.colors').editor.title },
         NavicIconsNamespace     = { fg = require('material.colors').main.yellow },

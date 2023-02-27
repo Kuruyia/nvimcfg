@@ -30,9 +30,38 @@ cmp.setup({
         },
     }),
     view = {
-        entries = { name = 'custom', selection_order = 'near_cursor' }
+        entries = { name = 'custom' }
     },
     formatting = {
-        format = require('lspkind').cmp_format()
+        format = require('lspkind').cmp_format({
+            symbol_map = {
+                File = ' ',
+                Module = ' ',
+                Namespace = ' ',
+                Package = ' ',
+                Class = ' ',
+                Method = ' ',
+                Property = ' ',
+                Field = ' ',
+                Constructor = ' ',
+                Enum = ' ',
+                Interface = ' ',
+                Function = ' ',
+                Variable = ' ',
+                Constant = ' ',
+                String = ' ',
+                Number = ' ',
+                Boolean = ' ',
+                Array = ' ',
+                Object = ' ',
+                Key = ' ',
+                Null = ' ',
+                EnumMember = ' ',
+                Struct = ' ',
+                Event = ' ',
+                Operator = ' ',
+                TypeParameter = ' '
+            },
+        })
     }
 })

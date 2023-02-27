@@ -40,6 +40,12 @@ vim.keymap.set('n', '<C-l>', '<CMD>nohl<CR>')
 vim.keymap.set('n', 'gb', '<CMD>bnext<CR>')
 vim.keymap.set('n', 'gB', '<CMD>bprevious<CR>')
 
+vim.keymap.set('n', '<C-o>', '<C-i>')
+vim.keymap.set('n', '<C-i>', '<C-o>')
+
+vim.keymap.set('n', '<C-k>', ',')
+vim.keymap.set('n', '<C-l>', ';')
+
 -- Autocmds
 local clear_trailing_whitespaces = function()
     -- Exclude some file types

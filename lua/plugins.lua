@@ -21,7 +21,6 @@ return require('packer').startup(function()
     -- https://github.com/marko-cerovac/material.nvim
     use {
         'marko-cerovac/material.nvim',
-        after = 'nvim-lualine/lualine.nvim',
         config = function()
             require('config.color_scheme')
         end
@@ -152,7 +151,6 @@ return require('packer').startup(function()
     -- https://github.com/lukas-reineke/indent-blankline.nvim
     use {
         'lukas-reineke/indent-blankline.nvim',
-        after = 'nvim-treesitter/nvim-treesitter',
         config = function()
             require('config.indent_blanklines')
         end
@@ -236,4 +234,18 @@ return require('packer').startup(function()
             require('config.guess_indent')
         end,
     }
+
+    -- Lspsaga
+    -- https://github.com/glepnir/lspsaga.nvim
+    use({
+        'glepnir/lspsaga.nvim',
+        branch = 'main',
+        config = function()
+            require('config.lspsaga')
+        end,
+        requires = {
+            {'nvim-tree/nvim-web-devicons'},
+            {'nvim-treesitter/nvim-treesitter'}
+        }
+    })
 end)

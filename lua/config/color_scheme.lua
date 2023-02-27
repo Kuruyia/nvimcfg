@@ -1,6 +1,4 @@
 -- Color scheme
-local colors = require('material.colors')
-
 vim.g.material_style = 'palenight'
 
 require('material').setup({

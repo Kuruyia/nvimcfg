@@ -248,4 +248,13 @@ return require('packer').startup(function()
             {'nvim-treesitter/nvim-treesitter'}
         }
     })
+
+    -- lsp_lines
+    -- https://git.sr.ht/~whynothugo/lsp_lines.nvim
+    use({
+        "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+        config = function()
+            require('config.lsp_lines')
+        end,
+    })
 end)

@@ -89,3 +89,4 @@ If there is a problem with the plugin, try:
 - [Trouble - Pretty list for showing LSP stuff](https://github.com/folke/trouble.nvim)
 - [:GuessIndent - Blazing fast indentation style detection](https://github.com/NMAC427/guess-indent.nvim)
 - [Lspsaga - Lightweight LSP utilities](https://github.com/glepnir/lspsaga.nvim)
+- [nvim-navic - Current code context winbar component](https://github.com/SmiteshP/nvim-navic)

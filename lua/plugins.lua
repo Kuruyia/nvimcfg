@@ -257,4 +257,14 @@ return require('packer').startup(function()
             require('config.lsp_lines')
         end,
     })
+
+    -- nvim-navic
+    -- https://github.com/SmiteshP/nvim-navic
+    use {
+        "SmiteshP/nvim-navic",
+        requires = "neovim/nvim-lspconfig",
+        config = function()
+            require('config.navic')
+        end,
+    }
 end)

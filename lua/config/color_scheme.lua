@@ -31,7 +31,7 @@ require('material').setup({
         -- "mini",
         -- "neogit",
         "nvim-cmp",
-        -- "nvim-navic",
+        "nvim-navic",
         "nvim-tree",
         "nvim-web-devicons",
         -- "sneak",
@@ -65,6 +65,17 @@ require('material').setup({
             italic = true
         },
         IndentBlanklineContextChar = { fg = '#AB47BC' },
+
+        NavicIconsFile          = { fg = require('material.colors').editor.title },
+        NavicIconsNamespace     = { fg = require('material.colors').main.yellow },
+        NavicIconsMethod        = { fg = require('material.colors').main.blue },
+        NavicIconsProperty      = { fg = require('material.colors').main.purple },
+        NavicIconsField         = { fg = require('material.colors').main.cyan },
+        NavicIconsVariable      = { fg = require('material.colors').main.paleblue },
+        NavicIconsString        = { fg = require('material.colors').main.orange },
+        NavicIconsBoolean       = { fg = require('material.colors').main.yellow },
+        NavicIconsNull          = { fg = require('material.colors').main.red },
+        NavicText               = { fg = require('material.colors').editor.fg },
     }, -- Overwrite highlights with your own
 
     contrast_filetypes = { -- Specify which filetypes get the contrasted (darker) background

@@ -141,3 +141,11 @@ if lspconfig.rust_analyzer then
         on_attach = on_attach
     })
 end
+
+-- Angular
+if lspconfig.angularls then
+    lspconfig.angularls.setup({
+        capabilities = capabilities,
+        on_attach = on_attach
+    })
+end

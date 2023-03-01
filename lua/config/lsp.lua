@@ -149,3 +149,11 @@ if lspconfig.angularls then
         on_attach = on_attach
     })
 end
+
+-- HTML
+if lspconfig.html then
+    lspconfig.html.setup({
+        capabilities = capabilities,
+        on_attach = on_attach
+    })
+end

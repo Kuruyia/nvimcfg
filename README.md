@@ -49,6 +49,7 @@ The following language servers are configured:
 - [terraformls - Terraform language server](https://github.com/hashicorp/terraform-ls)
 - [rust_analyzer - Rust language server](https://github.com/rust-analyzer/rust-analyzer)
 - [angularls - Angular language server](https://github.com/angular/vscode-ng-language-service)
+- [html - HTML language server](https://github.com/hrsh7th/vscode-langservers-extracted)
 
 ## Treesitter usage
 To install syntax highlighting for a language:

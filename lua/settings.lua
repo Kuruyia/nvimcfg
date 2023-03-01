@@ -43,8 +43,8 @@ vim.keymap.set('n', 'gB', '<CMD>bprevious<CR>')
 vim.keymap.set('n', '<C-o>', '<C-i>')
 vim.keymap.set('n', '<C-i>', '<C-o>')
 
-vim.keymap.set({'n','v'}, '<C-j>', ',')
-vim.keymap.set({'n','v'}, '<C-k>', ';')
+vim.keymap.set({'n','v'}, '<C-h>', ',')
+vim.keymap.set({'n','v'}, '<C-j>', ';')
 
 -- Autocmds
 local clear_trailing_whitespaces = function()

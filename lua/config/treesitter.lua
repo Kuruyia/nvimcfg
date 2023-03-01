@@ -1,5 +1,5 @@
 -- Treesitter
-require('nvim-treesitter.configs').setup {
+require('nvim-treesitter.configs').setup({
     highlight = {
         ensure_installed = {'markdown', 'markdown_inline'},
         enable = true,
@@ -9,4 +9,7 @@ require('nvim-treesitter.configs').setup {
         -- Instead of true it can also be a list of languages
         additional_vim_regex_highlighting = false,
     },
-}
+    autotag = {
+        enable = true,
+    }
+})

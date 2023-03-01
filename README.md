@@ -92,3 +92,4 @@ If there is a problem with the plugin, try:
 - [:GuessIndent - Blazing fast indentation style detection](https://github.com/NMAC427/guess-indent.nvim)
 - [Lspsaga - Lightweight LSP utilities](https://github.com/glepnir/lspsaga.nvim)
 - [nvim-navic - Current code context winbar component](https://github.com/SmiteshP/nvim-navic)
+- [nvim-ts-autotag - Automatic HTML/XML tag close and rename](https://github.com/windwp/nvim-ts-autotag)

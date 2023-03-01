@@ -267,4 +267,10 @@ return require('packer').startup(function()
             require('config.navic')
         end,
     }
+
+    -- nvim-ts-autotag
+    -- https://github.com/windwp/nvim-ts-autotag
+    use {
+        'windwp/nvim-ts-autotag',
+    }
 end)

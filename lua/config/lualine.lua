@@ -39,23 +39,31 @@ require('lualine').setup({
                 },
                 symbols = {
                     alternate_file = ''
-                }
+                },
+                filetype_names = {
+                    TelescopePrompt = 'Telescope',
+                    dashboard = 'Dashboard',
+                    packer = 'Packer',
+                    fzf = 'FZF',
+                    alpha = 'Alpha',
+                    NvimTree = 'Tree',
+                },
             }
         }
     },
 
     winbar = {
-      lualine_a = {},
-      lualine_b = {},
-      lualine_c = {
-          {
-              require('nvim-navic').get_location,
-              cond = require('nvim-navic').is_available
-          }
-      },
-      lualine_x = {},
-      lualine_y = {},
-      lualine_z = {}
+        lualine_a = {},
+        lualine_b = {},
+        lualine_c = {
+            {
+                require('nvim-navic').get_location,
+                cond = require('nvim-navic').is_available
+            }
+        },
+        lualine_x = {},
+        lualine_y = {},
+        lualine_z = {}
     },
 
     extensions = {}

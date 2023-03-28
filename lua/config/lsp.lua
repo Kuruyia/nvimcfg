@@ -157,3 +157,11 @@ if lspconfig.html then
         on_attach = on_attach
     })
 end
+
+-- R
+if lspconfig.r_language_server then
+    lspconfig.r_language_server.setup({
+        capabilities = capabilities,
+        on_attach = on_attach
+    })
+end

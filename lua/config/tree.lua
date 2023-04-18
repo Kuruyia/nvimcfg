@@ -4,7 +4,6 @@ vim.cmd('packadd nvim-web-devicons')
 require('nvim-tree').setup({
     view = {
         width = 38,
-        hide_root_folder = true
     },
     renderer = {
         indent_markers = {
@@ -14,7 +13,8 @@ require('nvim-tree').setup({
             show = {
                 folder_arrow = false
             }
-        }
+        },
+        root_folder_label = false
     }
 })
 

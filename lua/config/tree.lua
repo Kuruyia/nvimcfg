@@ -14,7 +14,7 @@ require('nvim-tree').setup({
                 folder_arrow = false
             }
         },
-        root_folder_label = false
+        root_folder_label = ":t"
     }
 })
 

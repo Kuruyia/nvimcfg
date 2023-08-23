@@ -12,7 +12,7 @@ require('lspsaga').setup({
 })
 
 -- Keymaps
-vim.keymap.set('n', 'gh', '<cmd>Lspsaga lsp_finder<CR>')
+vim.keymap.set('n', 'gh', '<cmd>Lspsaga finder<CR>')
 vim.keymap.set({'n','v'}, 'gc', '<cmd>Lspsaga code_action<CR>')
 vim.keymap.set('n', 'gr', '<cmd>Lspsaga rename<CR>')
 vim.keymap.set('n', 'gd', '<cmd>Lspsaga peek_definition<CR>')

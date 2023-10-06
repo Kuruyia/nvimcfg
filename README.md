@@ -81,7 +81,6 @@ If there is a problem with the plugin, try:
 - [Mason LSP Config - Bridges Mason with LSP Config](https://github.com/williamboman/mason-lspconfig.nvim)
 - [Nvim cmp - Completion engine](https://github.com/hrsh7th/nvim-cmp)
 - [LSP Kind - Icons for LSP](https://github.com/onsails/lspkind.nvim)
-- [Discord presence - Discord rich presence](https://github.com/andweeb/presence.nvim)
 - [Treesitter - Better syntax highlighting](https://github.com/nvim-treesitter/nvim-treesitter)
 - [Indent Blankline - Indentation guides](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [Illuminate - Same-token highlighting](https://github.com/RRethy/vim-illuminate)

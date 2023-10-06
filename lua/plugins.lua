@@ -129,15 +129,6 @@ return require('packer').startup(function()
         'onsails/lspkind.nvim'
     }
 
-    -- Discord Presence
-    -- https://github.com/andweeb/presence.nvim
-    use {
-        'andweeb/presence.nvim',
-        config = function()
-            require('config.discord_presence')
-        end
-    }
-
     -- Treesitter
     -- https://github.com/nvim-treesitter/nvim-treesitter
     use {

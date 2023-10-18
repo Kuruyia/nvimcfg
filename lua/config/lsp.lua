@@ -1,6 +1,7 @@
 -- LSP servers
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspconfig = require('lspconfig')
+local util = require('lspconfig.util')
 
 -- Attach handler
 local on_attach = function(client, bufnr)
@@ -103,10 +104,28 @@ if lspconfig.tsserver then
 end
 
 -- Vuejs
-if lspconfig.vuels then
-    lspconfig.vuels.setup({
+local function get_typescript_server_path(root_dir)
+    local found_dir_path = ''
+
+    local function check_dir(path)
+        found_dir_path = util.path.join(path, 'node_modules', 'typescript', 'lib')
+        return util.path.exists(found_dir_path)
+    end
+
+    local has_found_dir = util.search_ancestors(root_dir, check_dir)
+
+    if has_found_dir then
+        return found_dir_path
+    end
+end
+
+if lspconfig.volar then
+    lspconfig.volar.setup({
         capabilities = capabilities,
-        on_attach = on_attach
+        on_attach = on_attach,
+        on_new_config = function(new_config, new_root_dir)
+            new_config.init_options.typescript.tsdk = get_typescript_server_path(new_root_dir)
+        end
     })
 end
 

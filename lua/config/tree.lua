@@ -1,6 +1,4 @@
 -- Tree
-vim.cmd('packadd nvim-web-devicons')
-
 require('nvim-tree').setup({
     view = {
         width = 38,

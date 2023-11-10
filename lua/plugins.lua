@@ -132,9 +132,7 @@ require('lazy').setup({
 
     -- LSP Kind
     -- https://github.com/onsails/lspkind.nvim
-    {
-        'onsails/lspkind.nvim'
-    },
+    'onsails/lspkind.nvim',
 
     -- Treesitter
     -- https://github.com/nvim-treesitter/nvim-treesitter
@@ -156,9 +154,7 @@ require('lazy').setup({
 
     -- vim-illuminate
     -- https://github.com/RRethy/vim-illuminate
-    {
-        'RRethy/vim-illuminate'
-    },
+    'RRethy/vim-illuminate',
 
     -- alpha-nvim
     -- https://github.com/goolord/alpha-nvim
@@ -261,7 +257,5 @@ require('lazy').setup({
 
     -- nvim-ts-autotag
     -- https://github.com/windwp/nvim-ts-autotag
-    {
-        'windwp/nvim-ts-autotag',
-    },
+    'windwp/nvim-ts-autotag',
 })

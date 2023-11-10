@@ -222,14 +222,9 @@ require('lazy').setup({
         build = 'go build -o '..vim.fn.stdpath('data')..'/bin/'
     },
 
-    -- :GuessIndent
-    -- https://github.com/NMAC427/guess-indent.nvim
-    {
-        'nmac427/guess-indent.nvim',
-        config = function()
-            require('config.guess_indent')
-        end,
-    },
+    -- Sleuth
+    -- https://github.com/tpope/vim-sleuth
+    'tpope/vim-sleuth',
 
     -- Lspsaga
     -- https://github.com/glepnir/lspsaga.nvim

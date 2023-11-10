@@ -1,4 +1,5 @@
 -- Color scheme
+local material_colors = require('material.colors')
 vim.g.material_style = 'palenight'
 
 require('material').setup({
@@ -24,17 +25,25 @@ require('material').setup({
     plugins = { -- Here, you can disable(set to false) plugins that you don't use or don't want to apply the theme to
         -- "dap",
         -- "dashboard",
+        -- "eyeliner",
+        "fidget",
+        -- "flash",
         "gitsigns",
+        -- "harpoon",
         -- "hop",
+        -- "illuminate",
         "indent-blankline",
         "lspsaga",
         -- "mini",
         -- "neogit",
         -- "neorg",
+        -- "neotest",
+        -- "noice",
         "nvim-cmp",
         "nvim-navic",
         "nvim-tree",
         "nvim-web-devicons",
+        -- "rainbow-delimiters",
         -- "sneak",
         "telescope",
         "trouble",
@@ -68,16 +77,16 @@ require('material').setup({
         IndentBlanklineContextChar = { fg = '#AB47BC' },
         PmenuThumb = { fg = '#A6ACCD', bg = '#676E95' },
 
-        NavicIconsFile          = { fg = require('material.colors').editor.title },
-        NavicIconsNamespace     = { fg = require('material.colors').main.yellow },
-        NavicIconsMethod        = { fg = require('material.colors').main.blue },
-        NavicIconsProperty      = { fg = require('material.colors').main.purple },
-        NavicIconsField         = { fg = require('material.colors').main.cyan },
-        NavicIconsVariable      = { fg = require('material.colors').main.paleblue },
-        NavicIconsString        = { fg = require('material.colors').main.orange },
-        NavicIconsBoolean       = { fg = require('material.colors').main.yellow },
-        NavicIconsNull          = { fg = require('material.colors').main.red },
-        NavicText               = { fg = require('material.colors').editor.fg },
+        NavicIconsFile          = { fg = material_colors.editor.title },
+        NavicIconsNamespace     = { fg = material_colors.main.yellow },
+        NavicIconsMethod        = { fg = material_colors.main.blue },
+        NavicIconsProperty      = { fg = material_colors.main.purple },
+        NavicIconsField         = { fg = material_colors.main.cyan },
+        NavicIconsVariable      = { fg = material_colors.main.paleblue },
+        NavicIconsString        = { fg = material_colors.main.orange },
+        NavicIconsBoolean       = { fg = material_colors.main.yellow },
+        NavicIconsNull          = { fg = material_colors.main.red },
+        NavicText               = { fg = material_colors.editor.fg },
     }, -- Overwrite highlights with your own
 
     contrast_filetypes = { -- Specify which filetypes get the contrasted (darker) background

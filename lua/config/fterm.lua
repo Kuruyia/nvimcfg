@@ -2,18 +2,18 @@
 local fterm = require('FTerm')
 
 fterm.setup({
-    border = 'rounded'
+  border = 'rounded',
 })
 
 -- Keymap
 vim.keymap.set('n', ',', '<CMD>lua require("FTerm").toggle()<CR>')
 
 local esc_close_fterm = function()
-    if vim.bo.filetype ~= 'FTerm' then
-        return
-    end
+  if vim.bo.filetype ~= 'FTerm' then
+    return
+  end
 
-    fterm.close()
+  fterm.close()
 end
 
 vim.keymap.set('n', '<Esc>', esc_close_fterm)

@@ -1,19 +1,19 @@
 -- Tree
 require('nvim-tree').setup({
-    view = {
-        width = 38,
+  view = {
+    width = 38,
+  },
+  renderer = {
+    indent_markers = {
+      enable = true,
     },
-    renderer = {
-        indent_markers = {
-            enable = true
-        },
-        icons = {
-            show = {
-                folder_arrow = false
-            }
-        },
-        root_folder_label = ":t"
-    }
+    icons = {
+      show = {
+        folder_arrow = false,
+      },
+    },
+    root_folder_label = ':t',
+  },
 })
 
 -- Vim command

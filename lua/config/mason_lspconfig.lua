@@ -1,2 +1,2 @@
 -- Mason LSP Config
-require("mason-lspconfig").setup()
+require('mason-lspconfig').setup()

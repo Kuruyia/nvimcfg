@@ -207,17 +207,6 @@ require('lazy').setup({
         end
     },
 
-    -- nvim-texlabconfig
-    -- https://github.com/f3fora/nvim-texlabconfig
-    {
-        'f3fora/nvim-texlabconfig',
-        config = function()
-            require('config.texlabconfig')
-        end,
-        ft = { 'tex', 'bib' },
-        build = 'go build -o '..vim.fn.stdpath('data')..'/bin/'
-    },
-
     -- Sleuth
     -- https://github.com/tpope/vim-sleuth
     'tpope/vim-sleuth',

@@ -87,7 +87,6 @@ If there is a problem with the plugin, try:
 - [FTerm - Floating terminal](https://github.com/numToStr/FTerm.nvim)
 - [Tree - Sidebar file explorer](https://github.com/nvim-tree/nvim-tree.lua)
 - [Trouble - Pretty list for showing LSP stuff](https://github.com/folke/trouble.nvim)
-- [Texlab config - Language server for LaTeX](https://github.com/f3fora/nvim-texlabconfig)
 - [Sleuth - Indentation style detection](https://github.com/tpope/vim-sleuth)
 - [Lspsaga - Lightweight LSP utilities](https://github.com/glepnir/lspsaga.nvim)
 - [Lsp lines - Error line rendering](https://git.sr.ht/~whynothugo/lsp_lines.nvim)

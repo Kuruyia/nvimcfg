@@ -1,6 +1,7 @@
 -- Fidget
 require('fidget').setup({
   progress = {
+    ignore = { 'ltex' },
     display = {
       group_style = 'FidgetTitle',
     },

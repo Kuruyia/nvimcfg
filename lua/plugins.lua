@@ -81,6 +81,15 @@ require('lazy').setup({
         end
     },
 
+    -- Fidget
+    -- https://github.com/j-hui/fidget.nvim
+    {
+        'j-hui/fidget.nvim',
+        config = function()
+            require('config.fidget')
+        end
+    },
+
     -- Mason
     -- https://github.com/williamboman/mason.nvim#requirements
     {
@@ -108,7 +117,8 @@ require('lazy').setup({
         dependencies = {
             'williamboman/mason.nvim',
             'williamboman/mason-lspconfig.nvim',
-            'hrsh7th/cmp-nvim-lsp'
+            'hrsh7th/cmp-nvim-lsp',
+            'j-hui/fidget.nvim'
         },
         config = function()
             require('config.lsp')

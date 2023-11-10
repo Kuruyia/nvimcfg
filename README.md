@@ -93,3 +93,4 @@ If there is a problem with the plugin, try:
 - [Lsp lines - Error line rendering](https://git.sr.ht/~whynothugo/lsp_lines.nvim)
 - [nvim-navic - Current code context winbar component](https://github.com/SmiteshP/nvim-navic)
 - [nvim-ts-autotag - Automatic HTML/XML tag close and rename](https://github.com/windwp/nvim-ts-autotag)
+- [Fugitive - Git wrapper "so awesome, it should be illegal"](https://github.com/tpope/vim-fugitive)

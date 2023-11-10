@@ -258,4 +258,8 @@ require('lazy').setup({
     -- nvim-ts-autotag
     -- https://github.com/windwp/nvim-ts-autotag
     'windwp/nvim-ts-autotag',
+
+    -- fugitive.vim
+    -- https://github.com/tpope/vim-fugitive
+    'tpope/vim-fugitive',
 })

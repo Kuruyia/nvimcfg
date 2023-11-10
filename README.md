@@ -69,7 +69,7 @@ If there is a problem with the plugin, try:
 
 ## Plugins
 - [Lazy - Plugin manager](https://github.com/folke/lazy.nvim)
-- [Material - Theme](https://github.com/marko-cerovac/material.nvim)
+- [Material - Color scheme](https://github.com/marko-cerovac/material.nvim)
 - [Lualine - Status line manager](https://github.com/nvim-lualine/lualine.nvim)
 - [Git signs - Git gutter signs](https://github.com/lewis6991/gitsigns.nvim)
 - [Telescope - Fuzzy finder](https://github.com/nvim-telescope/telescope.nvim)

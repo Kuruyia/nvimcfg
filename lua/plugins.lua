@@ -262,4 +262,13 @@ require('lazy').setup({
   -- fugitive.vim
   -- https://github.com/tpope/vim-fugitive
   'tpope/vim-fugitive',
+
+  -- Comment
+  -- https://github.com/numToStr/Comment.nvim
+  {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('config.comment')
+    end,
+  },
 })

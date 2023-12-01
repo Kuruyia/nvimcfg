@@ -23,10 +23,12 @@ if version.major == 0 and version.minor < 8 then
 end
 
 require('lazy').setup({
-  -- Material color scheme
-  -- https://github.com/marko-cerovac/material.nvim
+  -- Catppuccin color scheme
+  -- https://github.com/catppuccin/nvim
   {
-    'marko-cerovac/material.nvim',
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1000,
     config = function()
       require('config.color_scheme')
     end,

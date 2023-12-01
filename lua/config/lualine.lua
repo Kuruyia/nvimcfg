@@ -2,9 +2,9 @@
 require('lualine').setup({
   options = {
     icons_enabled = true,
-    theme = 'auto',
-    component_separators = { left = '', right = '' },
-    section_separators = { left = '', right = '' },
+    theme = 'catppuccin',
+    component_separators = { left = '', right = '' },
+    section_separators = { left = '', right = '' },
     disabled_filetypes = {},
     always_divide_middle = true,
     globalstatus = false,
@@ -32,11 +32,7 @@ require('lualine').setup({
     lualine_a = {
       {
         'buffers',
-        padding = { left = 2, right = 1 },
-        buffers_color = {
-          active = 'lualine_buffers_active',
-          inactive = 'lualine_a_inactive',
-        },
+        padding = { left = 1, right = 1 },
         symbols = {
           alternate_file = '',
         },

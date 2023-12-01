@@ -95,3 +95,4 @@ If there is a problem with the plugin, try:
 - [nvim-ts-autotag - Automatic HTML/XML tag close and rename](https://github.com/windwp/nvim-ts-autotag)
 - [Fugitive - Git wrapper "so awesome, it should be illegal"](https://github.com/tpope/vim-fugitive)
 - [Comment - Smart and powerful commenting plugin](https://github.com/numToStr/Comment.nvim)
+- [Persistence - Simple session management](https://github.com/folke/persistence.nvim)

@@ -1,0 +1,2 @@
+-- Persistence
+require('persistence').setup()

@@ -275,4 +275,14 @@ require('lazy').setup({
       require('config.comment')
     end,
   },
+
+  -- Persistence
+  -- https://github.com/folke/persistence.nvim
+  {
+    'folke/persistence.nvim',
+    event = 'BufReadPre',
+    config = function()
+      require('config.persistence')
+    end,
+  },
 })

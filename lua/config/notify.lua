@@ -2,7 +2,8 @@
 local notify = require('notify')
 
 notify.setup({
-  stages = 'slide',
+  stages = 'fade',
+  top_down = true,
 })
 
 -- Use it as the default notification manager

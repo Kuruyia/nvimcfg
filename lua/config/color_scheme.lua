@@ -39,6 +39,7 @@ require('catppuccin').setup({
     lsp_trouble = true,
     lsp_saga = true,
     notify = true,
+    noice = true,
   },
   custom_highlights = function(colors)
     return {

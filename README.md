@@ -98,3 +98,4 @@ If there is a problem with the plugin, try:
 - [Comment - Smart and powerful commenting plugin](https://github.com/numToStr/Comment.nvim)
 - [Persistence - Simple session management](https://github.com/folke/persistence.nvim)
 - [Bufferline - A snazzy bufferline](https://github.com/akinsho/bufferline.nvim)
+- [Noice - Complete replacement for the `messages`, `cmdline` and `popupmenu` UIs](https://github.com/folke/noice.nvim)

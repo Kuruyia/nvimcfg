@@ -99,15 +99,6 @@ require('lazy').setup({
     end,
   },
 
-  {
-    'mrded/nvim-lsp-notify',
-    event = 'VeryLazy',
-    dependencies = {
-      'rcarriga/nvim-notify',
-    },
-    config = true,
-  },
-
   -- Mason
   -- https://github.com/williamboman/mason.nvim#requirements
   {
@@ -328,6 +319,20 @@ require('lazy').setup({
     dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true },
     config = function()
       require('config.bufferline')
+    end,
+  },
+
+  -- Noice
+  -- https://github.com/folke/noice.nvim
+  {
+    'folke/noice.nvim',
+    event = 'VeryLazy',
+    dependencies = {
+      'MunifTanjim/nui.nvim',
+      'rcarriga/nvim-notify',
+    },
+    config = function()
+      require('config.noice')
     end,
   },
 })

@@ -5,7 +5,7 @@ require('lualine').setup({
     theme = 'catppuccin',
     component_separators = { left = '', right = '' },
     section_separators = { left = '', right = '' },
-    disabled_filetypes = {},
+    disabled_filetypes = { 'alpha' },
     always_divide_middle = true,
     globalstatus = false,
   },
@@ -38,15 +38,17 @@ require('lualine').setup({
         },
         filetype_names = {
           TelescopePrompt = 'Telescope',
-          dashboard = 'Dashboard',
-          packer = 'Packer',
-          fzf = 'FZF',
           alpha = 'Alpha',
-          NvimTree = 'Tree',
         },
       },
     },
   },
 
-  extensions = {},
+  extensions = {
+    'fugitive',
+    'lazy',
+    'mason',
+    'neo-tree',
+    'trouble',
+  },
 })

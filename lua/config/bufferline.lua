@@ -2,6 +2,7 @@
 require('bufferline').setup({
   options = {
     separator_style = 'slant',
+    buffer_close_icon = '󰅖',
     offsets = {
       {
         filetype = 'neo-tree',

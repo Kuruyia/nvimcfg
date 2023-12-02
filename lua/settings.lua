@@ -26,6 +26,7 @@ vim.opt.belloff = 'all'
 vim.opt.mouse = 'a'
 vim.opt.scrolloff = 8
 vim.opt.clipboard = 'unnamedplus'
+vim.opt.mousemoveevent = true
 
 -- Keymaps
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')

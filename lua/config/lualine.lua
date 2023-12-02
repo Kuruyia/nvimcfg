@@ -28,22 +28,6 @@ require('lualine').setup({
     lualine_z = {},
   },
 
-  tabline = {
-    lualine_a = {
-      {
-        'buffers',
-        padding = { left = 1, right = 1 },
-        symbols = {
-          alternate_file = '',
-        },
-        filetype_names = {
-          TelescopePrompt = 'Telescope',
-          alpha = 'Alpha',
-        },
-      },
-    },
-  },
-
   extensions = {
     'fugitive',
     'lazy',

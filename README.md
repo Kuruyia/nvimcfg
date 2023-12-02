@@ -74,7 +74,9 @@ If there is a problem with the plugin, try:
 - [Git signs - Git gutter signs](https://github.com/lewis6991/gitsigns.nvim)
 - [Telescope - Fuzzy finder](https://github.com/nvim-telescope/telescope.nvim)
 - [Autopairs - Automatically closes pairs](https://github.com/windwp/nvim-autopairs)
-- [Fidget - Notification manager](https://github.com/j-hui/fidget.nvim)
+- [Nvim notify - Notification manager](https://github.com/rcarriga/nvim-notify)
+
+:wa
 - [Mason - Easy installer for editor tooling](https://github.com/williamboman/mason.nvim)
 - [Mason LSP Config - Bridges Mason with LSP Config](https://github.com/williamboman/mason-lspconfig.nvim)
 - [LSP Config - Configures the LSP client](https://github.com/neovim/nvim-lspconfig)

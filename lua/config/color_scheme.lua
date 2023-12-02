@@ -4,7 +4,6 @@ require('catppuccin').setup({
   show_end_of_buffer = true,
   integrations = {
     gitsigns = true,
-    fidget = true,
     mason = true,
     native_lsp = {
       enabled = true,
@@ -39,6 +38,7 @@ require('catppuccin').setup({
     neotree = true,
     lsp_trouble = true,
     lsp_saga = true,
+    notify = true,
   },
   custom_highlights = function(colors)
     return {

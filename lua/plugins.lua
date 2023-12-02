@@ -89,13 +89,23 @@ require('lazy').setup({
     config = true,
   },
 
-  -- Fidget
-  -- https://github.com/j-hui/fidget.nvim
+  -- Nvim-notify
+  -- https://github.com/rcarriga/nvim-notify
   {
-    'j-hui/fidget.nvim',
+    'rcarriga/nvim-notify',
+    event = 'VeryLazy',
     config = function()
-      require('config.fidget')
+      require('config.notify')
     end,
+  },
+
+  {
+    'mrded/nvim-lsp-notify',
+    event = 'VeryLazy',
+    dependencies = {
+      'rcarriga/nvim-notify',
+    },
+    config = true,
   },
 
   -- Mason
@@ -117,7 +127,7 @@ require('lazy').setup({
       'williamboman/mason.nvim',
       'williamboman/mason-lspconfig.nvim',
       'hrsh7th/cmp-nvim-lsp',
-      'j-hui/fidget.nvim',
+      'rcarriga/nvim-notify',
     },
     config = function()
       require('config.lsp')

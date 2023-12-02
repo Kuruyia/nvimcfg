@@ -234,7 +234,9 @@ require('lazy').setup({
   {
     'folke/trouble.nvim',
     cmd = { 'TroubleToggle', 'Trouble' },
-    config = true,
+    config = function()
+      require('config.trouble')
+    end,
   },
 
   -- Sleuth

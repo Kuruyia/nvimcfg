@@ -48,19 +48,5 @@ require('lualine').setup({
     },
   },
 
-  winbar = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = {
-      {
-        require('nvim-navic').get_location,
-        cond = require('nvim-navic').is_available,
-      },
-    },
-    lualine_x = {},
-    lualine_y = {},
-    lualine_z = {},
-  },
-
   extensions = {},
 })

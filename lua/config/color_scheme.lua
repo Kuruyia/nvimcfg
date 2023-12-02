@@ -39,10 +39,6 @@ require('catppuccin').setup({
     neotree = true,
     lsp_trouble = true,
     lsp_saga = true,
-    navic = {
-      enabled = true,
-      custom_bg = 'NONE',
-    },
   },
   custom_highlights = function(colors)
     return {

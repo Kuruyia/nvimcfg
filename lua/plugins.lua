@@ -285,17 +285,6 @@ require('lazy').setup({
     end,
   },
 
-  -- nvim-navic
-  -- https://github.com/SmiteshP/nvim-navic
-  {
-    'SmiteshP/nvim-navic',
-    event = 'LspAttach',
-    dependencies = 'neovim/nvim-lspconfig',
-    config = function()
-      require('config.navic')
-    end,
-  },
-
   -- nvim-ts-autotag
   -- https://github.com/windwp/nvim-ts-autotag
   {

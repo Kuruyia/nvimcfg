@@ -7,12 +7,8 @@ local util = require('lspconfig.util')
 vim.lsp.set_log_level('OFF')
 
 -- Attach handler
-local on_attach = function(client, bufnr)
+local on_attach = function(client, _)
   require('illuminate').on_attach(client)
-
-  if client.server_capabilities.documentSymbolProvider then
-    require('nvim-navic').attach(client, bufnr)
-  end
 end
 
 -- For a list of LSP servers: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md

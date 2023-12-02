@@ -1,2 +1,0 @@
--- Trouble
-require('trouble').setup()

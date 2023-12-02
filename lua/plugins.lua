@@ -58,9 +58,7 @@ require('lazy').setup({
     'lewis6991/gitsigns.nvim',
     event = { 'BufReadPre', 'BufWritePre' },
     dependencies = { 'nvim-lua/plenary.nvim' },
-    config = function()
-      require('config.gitsigns')
-    end,
+    config = true,
   },
 
   -- Telescope
@@ -88,9 +86,7 @@ require('lazy').setup({
   {
     'windwp/nvim-autopairs',
     event = 'InsertEnter',
-    config = function()
-      require('config.autopairs')
-    end,
+    config = true,
   },
 
   -- Fidget
@@ -198,9 +194,7 @@ require('lazy').setup({
     event = 'LazyFile',
     branch = todo_comments_branch,
     dependencies = { 'nvim-lua/plenary.nvim' },
-    config = function()
-      require('config.todo_comments')
-    end,
+    config = true,
   },
 
   -- FTerm
@@ -239,9 +233,7 @@ require('lazy').setup({
   {
     'folke/trouble.nvim',
     cmd = { 'TroubleToggle', 'Trouble' },
-    config = function()
-      require('config.trouble')
-    end,
+    config = true,
   },
 
   -- Sleuth
@@ -307,9 +299,7 @@ require('lazy').setup({
   {
     'numToStr/Comment.nvim',
     event = 'LazyFile',
-    config = function()
-      require('config.comment')
-    end,
+    config = true,
   },
 
   -- Persistence
@@ -317,8 +307,6 @@ require('lazy').setup({
   {
     'folke/persistence.nvim',
     event = { 'BufReadPre', 'BufWritePre' },
-    config = function()
-      require('config.persistence')
-    end,
+    config = true,
   },
 })

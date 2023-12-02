@@ -12,5 +12,3 @@ require('telescope').setup({
 })
 
 require('telescope').load_extension('fzf')
-
-vim.keymap.set('n', ';', '<cmd>Telescope find_files<cr>')

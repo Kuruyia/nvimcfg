@@ -6,5 +6,3 @@ require('neo-tree').setup({
     width = 38,
   },
 })
-
-vim.keymap.set('n', '\\', '<cmd>Neotree reveal<cr>')

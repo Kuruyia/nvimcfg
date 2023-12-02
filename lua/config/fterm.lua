@@ -6,8 +6,6 @@ fterm.setup({
 })
 
 -- Keymap
-vim.keymap.set('n', ',', '<CMD>lua require("FTerm").toggle()<CR>')
-
 local esc_close_fterm = function()
   if vim.bo.filetype ~= 'FTerm' then
     return

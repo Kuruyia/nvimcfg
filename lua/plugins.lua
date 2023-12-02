@@ -14,6 +14,13 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+-- Add support for the LazyFile event
+-- See: https://github.com/LazyVim/LazyVim/blob/879e29504d43e9f178d967ecc34d482f902e5a91/lua/lazyvim/util/plugin.lua#L64-L75
+local Event = require('lazy.core.handler.event')
+
+Event.mappings.LazyFile = { id = 'LazyFile', event = { 'BufReadPost', 'BufNewFile', 'BufWritePre' } }
+Event.mappings['User LazyFile'] = Event.mappings.LazyFile
+
 -- Get nvim version
 local version = vim.version()
 
@@ -38,10 +45,8 @@ require('lazy').setup({
   -- https://github.com/nvim-lualine/lualine.nvim
   {
     'nvim-lualine/lualine.nvim',
-    dependencies = {
-      'nvim-tree/nvim-web-devicons',
-      lazy = true,
-    },
+    event = 'VeryLazy',
+    dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true },
     config = function()
       require('config.lualine')
     end,
@@ -51,6 +56,7 @@ require('lazy').setup({
   -- https://github.com/lewis6991/gitsigns.nvim
   {
     'lewis6991/gitsigns.nvim',
+    event = { 'BufReadPre', 'BufWritePre' },
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
       require('config.gitsigns')
@@ -61,6 +67,10 @@ require('lazy').setup({
   -- https://github.com/nvim-telescope/telescope.nvim
   {
     'nvim-telescope/telescope.nvim',
+    cmd = 'Telescope',
+    keys = {
+      { ';', '<cmd>Telescope find_files<cr>', desc = 'Open Telescope for finding files' },
+    },
     dependencies = {
       'nvim-lua/plenary.nvim',
       {
@@ -77,6 +87,7 @@ require('lazy').setup({
   -- https://github.com/windwp/nvim-autopairs
   {
     'windwp/nvim-autopairs',
+    event = 'InsertEnter',
     config = function()
       require('config.autopairs')
     end,
@@ -95,26 +106,17 @@ require('lazy').setup({
   -- https://github.com/williamboman/mason.nvim#requirements
   {
     'williamboman/mason.nvim',
+    cmd = 'Mason',
     config = function()
       require('config.mason')
     end,
   },
 
   -- LSP
-  -- https://github.com/williamboman/mason-lspconfig.nvim
   -- https://github.com/neovim/nvim-lspconfig
   {
-    'williamboman/mason-lspconfig.nvim',
-    dependencies = {
-      'williamboman/mason.nvim',
-    },
-    config = function()
-      require('config.mason_lspconfig')
-    end,
-  },
-
-  {
     'neovim/nvim-lspconfig',
+    event = 'LazyFile',
     dependencies = {
       'williamboman/mason.nvim',
       'williamboman/mason-lspconfig.nvim',
@@ -130,6 +132,7 @@ require('lazy').setup({
   -- https://github.com/hrsh7th/nvim-cmp
   {
     'hrsh7th/nvim-cmp',
+    event = 'InsertEnter',
     dependencies = {
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-buffer',
@@ -145,12 +148,17 @@ require('lazy').setup({
 
   -- LSP Kind
   -- https://github.com/onsails/lspkind.nvim
-  'onsails/lspkind.nvim',
+  {
+    'onsails/lspkind.nvim',
+    lazy = true,
+  },
 
   -- Treesitter
   -- https://github.com/nvim-treesitter/nvim-treesitter
   {
     'nvim-treesitter/nvim-treesitter',
+    cmd = { 'TSUpdateSync', 'TSUpdate', 'TSInstall' },
+    event = { 'LazyFile', 'VeryLazy' },
     config = function()
       require('config.treesitter')
     end,
@@ -160,6 +168,7 @@ require('lazy').setup({
   -- https://github.com/lukas-reineke/indent-blankline.nvim
   {
     'lukas-reineke/indent-blankline.nvim',
+    event = 'LazyFile',
     config = function()
       require('config.indent_blanklines')
     end,
@@ -167,12 +176,16 @@ require('lazy').setup({
 
   -- vim-illuminate
   -- https://github.com/RRethy/vim-illuminate
-  'RRethy/vim-illuminate',
+  {
+    'RRethy/vim-illuminate',
+    event = 'LazyFile',
+  },
 
   -- alpha-nvim
   -- https://github.com/goolord/alpha-nvim
   {
     'goolord/alpha-nvim',
+    event = 'VimEnter',
     config = function()
       require('config.alpha')
     end,
@@ -182,6 +195,7 @@ require('lazy').setup({
   -- https://github.com/folke/todo-comments.nvim
   {
     'folke/todo-comments.nvim',
+    event = 'LazyFile',
     branch = todo_comments_branch,
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
@@ -193,6 +207,9 @@ require('lazy').setup({
   -- https://github.com/numToStr/FTerm.nvim
   {
     'numToStr/FTerm.nvim',
+    keys = {
+      { ',', '<cmd>lua require("FTerm").toggle()<cr>', desc = 'Open the floating terminal' },
+    },
     config = function()
       require('config.fterm')
     end,
@@ -202,10 +219,14 @@ require('lazy').setup({
   -- https://github.com/nvim-neo-tree/neo-tree.nvim
   {
     'nvim-neo-tree/neo-tree.nvim',
+    cmd = 'Neotree',
+    keys = {
+      { '\\', '<cmd>Neotree reveal<cr>', desc = 'Open the filesystem tree' },
+    },
     branch = 'v3.x',
     dependencies = {
+      { 'nvim-tree/nvim-web-devicons', lazy = true },
       'nvim-lua/plenary.nvim',
-      'nvim-tree/nvim-web-devicons',
       'MunifTanjim/nui.nvim',
     },
     config = function()
@@ -217,6 +238,7 @@ require('lazy').setup({
   -- https://github.com/folke/trouble.nvim
   {
     'folke/trouble.nvim',
+    cmd = { 'TroubleToggle', 'Trouble' },
     config = function()
       require('config.trouble')
     end,
@@ -224,19 +246,32 @@ require('lazy').setup({
 
   -- Sleuth
   -- https://github.com/tpope/vim-sleuth
-  'tpope/vim-sleuth',
+  {
+    'tpope/vim-sleuth',
+    event = 'BufReadPre',
+  },
 
   -- Lspsaga
   -- https://github.com/glepnir/lspsaga.nvim
   {
     'glepnir/lspsaga.nvim',
+    event = 'LspAttach',
+    keys = {
+      { 'gh', '<cmd>Lspsaga finder<cr>', desc = 'Open the LSP symbol finder' },
+      { 'ga', '<cmd>Lspsaga code_action<cr>', desc = 'Open the LSP code actions' },
+      { 'gr', '<cmd>Lspsaga rename<cr>', desc = 'Open the LSP rename symbol' },
+      { 'gd', '<cmd>Lspsaga peek_definition<cr>', desc = 'Open the LSP peek at symbol definition' },
+      { 'gD', '<cmd>Lspsaga goto_definition<cr>', desc = 'Open the LSP go to symbol definition' },
+      { 'K', '<cmd>Lspsaga hover_doc<cr>', desc = 'Open the LSP hovering documentation' },
+      { '<C-k>', '<cmd>Lspsaga hover_doc ++keep<cr>', desc = 'Open the LSP sticky documentation' },
+    },
     branch = 'main',
     config = function()
       require('config.lspsaga')
     end,
     dependencies = {
-      { 'nvim-tree/nvim-web-devicons' },
-      { 'nvim-treesitter/nvim-treesitter' },
+      { 'nvim-tree/nvim-web-devicons', lazy = true },
+      'nvim-treesitter/nvim-treesitter',
     },
   },
 
@@ -244,6 +279,7 @@ require('lazy').setup({
   -- https://git.sr.ht/~whynothugo/lsp_lines.nvim
   {
     'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
+    event = 'LspAttach',
     config = function()
       require('config.lsp_lines')
     end,
@@ -253,6 +289,7 @@ require('lazy').setup({
   -- https://github.com/SmiteshP/nvim-navic
   {
     'SmiteshP/nvim-navic',
+    event = 'LspAttach',
     dependencies = 'neovim/nvim-lspconfig',
     config = function()
       require('config.navic')
@@ -261,16 +298,26 @@ require('lazy').setup({
 
   -- nvim-ts-autotag
   -- https://github.com/windwp/nvim-ts-autotag
-  'windwp/nvim-ts-autotag',
+  {
+    'windwp/nvim-ts-autotag',
+    event = { 'LazyFile', 'VeryLazy' },
+  },
 
   -- fugitive.vim
   -- https://github.com/tpope/vim-fugitive
-  'tpope/vim-fugitive',
+  {
+    'tpope/vim-fugitive',
+    cmd = {
+      'G',
+      'Git',
+    },
+  },
 
   -- Comment
   -- https://github.com/numToStr/Comment.nvim
   {
     'numToStr/Comment.nvim',
+    event = 'LazyFile',
     config = function()
       require('config.comment')
     end,
@@ -280,7 +327,7 @@ require('lazy').setup({
   -- https://github.com/folke/persistence.nvim
   {
     'folke/persistence.nvim',
-    event = 'BufReadPre',
+    event = { 'BufReadPre', 'BufWritePre' },
     config = function()
       require('config.persistence')
     end,

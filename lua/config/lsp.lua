@@ -3,6 +3,9 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspconfig = require('lspconfig')
 local util = require('lspconfig.util')
 
+-- Disable logging
+vim.lsp.set_log_level('OFF')
+
 -- Attach handler
 local on_attach = function(client, bufnr)
   require('illuminate').on_attach(client)

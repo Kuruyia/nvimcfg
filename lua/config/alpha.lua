@@ -4,7 +4,7 @@ local dashboard = require('alpha.themes.dashboard')
 -- Header
 local function getGreeting(name)
   local tableTime = os.date('*t')
-  local datetime = os.date(' %Y-%m-%d   %H:%M:%S')
+  local datetime = os.date('  %Y-%m-%d    %H:%M:%S')
   local hour = tableTime.hour
   local greetingIndex = 0
   local greetingsTable = {
@@ -49,10 +49,10 @@ dashboard.opts.layout[3].val = 4
 dashboard.section.buttons.val = {
   dashboard.button('s', '   Restore', [[:lua require("persistence").load() <cr>]]),
   dashboard.button('r', '   Recents', ':Telescope oldfiles<CR>'),
-  dashboard.button('f', '   Search ', ':Telescope find_files<CR>'),
-  dashboard.button('e', '   Create ', ':ene <BAR> startinsert<CR>'),
+  dashboard.button('f', '   Search ', ':Telescope find_files<CR>'),
+  dashboard.button('e', '   Create ', ':ene <BAR> startinsert<CR>'),
   dashboard.button('u', '   Update ', ':Lazy sync<CR>'),
-  dashboard.button('c', '   Config ', ':e ~/.config/nvim/<CR>'),
+  dashboard.button('c', '   Config ', ':e ~/.config/nvim/<CR>'),
   dashboard.button('q', '   Quit   ', ':qa!<CR>'),
 }
 

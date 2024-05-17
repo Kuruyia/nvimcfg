@@ -67,3 +67,10 @@ end
 vim.api.nvim_create_autocmd('BufWritePre', {
   callback = clear_trailing_whitespaces,
 })
+
+-- Filetypes
+vim.filetype.add({
+  filename = {
+    ['justfile'] = 'just',
+  },
+})

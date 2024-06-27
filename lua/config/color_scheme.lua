@@ -39,6 +39,7 @@ require('catppuccin').setup({
     neotree = true,
     noice = true,
     notify = true,
+    window_picker = true,
     treesitter = true,
   },
   custom_highlights = function(colors)

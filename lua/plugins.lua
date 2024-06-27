@@ -223,6 +223,7 @@ require('lazy').setup({
       { 'nvim-tree/nvim-web-devicons', lazy = true },
       'nvim-lua/plenary.nvim',
       'MunifTanjim/nui.nvim',
+      'window-picker',
     },
     config = function()
       require('config.neo_tree')
@@ -335,6 +336,18 @@ require('lazy').setup({
     },
     config = function()
       require('config.noice')
+    end,
+  },
+
+  -- nvim-window-picker
+  -- https://github.com/s1n7ax/nvim-window-picker
+  {
+    's1n7ax/nvim-window-picker',
+    name = 'window-picker',
+    event = 'VeryLazy',
+    version = '2.*',
+    config = function()
+      require('config.window_picker')
     end,
   },
 })

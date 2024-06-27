@@ -97,3 +97,4 @@ If there is a problem with the plugin, try:
 - [Persistence - Simple session management](https://github.com/folke/persistence.nvim)
 - [Bufferline - A snazzy bufferline](https://github.com/akinsho/bufferline.nvim)
 - [Noice - Complete replacement for the `messages`, `cmdline` and `popupmenu` UIs](https://github.com/folke/noice.nvim)
+- [nvim-window-picker - Window picker](https://github.com/s1n7ax/nvim-window-picker)

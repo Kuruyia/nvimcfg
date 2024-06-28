@@ -4,5 +4,8 @@ require('neo-tree').setup({
   popup_border_style = 'rounded',
   window = {
     width = 38,
+    mappings = {
+      ['<cr>'] = 'open_with_window_picker',
+    },
   },
 })

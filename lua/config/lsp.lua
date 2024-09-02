@@ -1,6 +1,7 @@
 -- LSP servers
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspconfig = require('lspconfig')
+local mason_registry = require('mason-registry')
 local util = require('lspconfig.util')
 
 -- Disable logging
@@ -95,10 +96,22 @@ if lspconfig.texlab then
 end
 
 -- TypeScript / JavaScript
+local vue_language_server_path = mason_registry.get_package('vue-language-server'):get_install_path()
+  .. '/node_modules/@vue/language-server'
+
 if lspconfig.tsserver then
   lspconfig.tsserver.setup({
     capabilities = capabilities,
     on_attach = on_attach,
+    init_options = {
+      plugins = {
+        {
+          name = '@vue/typescript-plugin',
+          location = vue_language_server_path,
+          languages = { 'vue' },
+        },
+      },
+    },
   })
 end
 
@@ -125,6 +138,11 @@ if lspconfig.volar then
     on_new_config = function(new_config, new_root_dir)
       new_config.init_options.typescript.tsdk = get_typescript_server_path(new_root_dir)
     end,
+    init_options = {
+      vue = {
+        hybridMode = false,
+      },
+    },
   })
 end
 

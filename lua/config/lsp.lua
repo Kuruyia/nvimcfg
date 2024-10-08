@@ -12,7 +12,7 @@ local on_attach = function(client, _)
   require('illuminate').on_attach(client)
 end
 
--- For a list of LSP servers: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+-- For a list of LSP servers: https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 
 -- Lua LSP server
 if lspconfig.lua_ls then
@@ -99,8 +99,8 @@ end
 local vue_language_server_path = mason_registry.get_package('vue-language-server'):get_install_path()
   .. '/node_modules/@vue/language-server'
 
-if lspconfig.tsserver then
-  lspconfig.tsserver.setup({
+if lspconfig.ts_ls then
+  lspconfig.ts_ls.setup({
     capabilities = capabilities,
     on_attach = on_attach,
     init_options = {

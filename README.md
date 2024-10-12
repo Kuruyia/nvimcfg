@@ -14,7 +14,7 @@ pacman -S cmake base-devel fd ripgrep
 
 In Neovim, run:
 ```vim
-:Lazy sync
+:Lazy restore
 ```
 
 ## Reset

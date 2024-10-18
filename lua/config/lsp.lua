@@ -96,21 +96,24 @@ if lspconfig.texlab then
 end
 
 -- TypeScript / JavaScript
-local vue_language_server_path = mason_registry.get_package('vue-language-server'):get_install_path()
-  .. '/node_modules/@vue/language-server'
+local ts_ls_plugins = {}
+local registry_volar_get_package_success, registry_volar_get_package =
+  pcall(mason_registry.get_package, 'vue-language-server')
+
+if registry_volar_get_package_success then
+  table.insert(ts_ls_plugins, {
+    name = '@vue/typescript-plugin',
+    location = registry_volar_get_package:get_install_path() .. '/node_modules/@vue/language-server',
+    languages = { 'vue' },
+  })
+end
 
 if lspconfig.ts_ls then
   lspconfig.ts_ls.setup({
     capabilities = capabilities,
     on_attach = on_attach,
     init_options = {
-      plugins = {
-        {
-          name = '@vue/typescript-plugin',
-          location = vue_language_server_path,
-          languages = { 'vue' },
-        },
-      },
+      plugins = ts_ls_plugins,
     },
   })
 end

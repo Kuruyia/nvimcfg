@@ -288,16 +288,6 @@ require('lazy').setup({
     event = { 'LazyFile', 'VeryLazy' },
   },
 
-  -- fugitive.vim
-  -- https://github.com/tpope/vim-fugitive
-  {
-    'tpope/vim-fugitive',
-    cmd = {
-      'G',
-      'Git',
-    },
-  },
-
   -- Comment
   -- https://github.com/numToStr/Comment.nvim
   {
@@ -349,5 +339,22 @@ require('lazy').setup({
     config = function()
       require('config.window_picker')
     end,
+  },
+
+  -- Neogit
+  -- https://github.com/NeogitOrg/neogit
+  {
+    'NeogitOrg/neogit',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'sindrets/diffview.nvim',
+      'nvim-telescope/telescope.nvim',
+    },
+    config = function()
+      require('config.neogit')
+    end,
+    keys = {
+      { '|', '<cmd>Neogit<cr>', desc = 'Open the Neogit status buffer' },
+    },
   },
 })

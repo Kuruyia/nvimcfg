@@ -206,8 +206,8 @@ if lspconfig.r_language_server then
 end
 
 -- Protobuf
-if lspconfig.bufls then
-  lspconfig.bufls.setup({
+if lspconfig.buf_ls then
+  lspconfig.buf_ls.setup({
     capabilities = capabilities,
     on_attach = on_attach,
   })

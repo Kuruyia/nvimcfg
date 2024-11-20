@@ -58,7 +58,9 @@ require('lazy').setup({
     'lewis6991/gitsigns.nvim',
     event = { 'BufReadPre', 'BufWritePre' },
     dependencies = { 'nvim-lua/plenary.nvim' },
-    config = true,
+    config = function()
+      require('config.gitsigns')
+    end,
   },
 
   -- Telescope

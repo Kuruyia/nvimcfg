@@ -96,56 +96,10 @@ if lspconfig.texlab then
 end
 
 -- TypeScript / JavaScript
-local ts_ls_plugins = {}
-local registry_volar_get_package_success, registry_volar_get_package =
-  pcall(mason_registry.get_package, 'vue-language-server')
-
-if registry_volar_get_package_success then
-  table.insert(ts_ls_plugins, {
-    name = '@vue/typescript-plugin',
-    location = registry_volar_get_package:get_install_path() .. '/node_modules/@vue/language-server',
-    languages = { 'vue' },
-  })
-end
-
 if lspconfig.ts_ls then
   lspconfig.ts_ls.setup({
     capabilities = capabilities,
     on_attach = on_attach,
-    init_options = {
-      plugins = ts_ls_plugins,
-    },
-  })
-end
-
--- Vuejs
-local function get_typescript_server_path(root_dir)
-  local found_dir_path = ''
-
-  local function check_dir(path)
-    found_dir_path = util.path.join(path, 'node_modules', 'typescript', 'lib')
-    return util.path.exists(found_dir_path)
-  end
-
-  local has_found_dir = util.search_ancestors(root_dir, check_dir)
-
-  if has_found_dir then
-    return found_dir_path
-  end
-end
-
-if lspconfig.volar then
-  lspconfig.volar.setup({
-    capabilities = capabilities,
-    on_attach = on_attach,
-    on_new_config = function(new_config, new_root_dir)
-      new_config.init_options.typescript.tsdk = get_typescript_server_path(new_root_dir)
-    end,
-    init_options = {
-      vue = {
-        hybridMode = false,
-      },
-    },
   })
 end
 

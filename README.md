@@ -41,7 +41,6 @@ The following language servers are configured:
 - [ltex - LanguageTool language server for LaTeX and Markdown](https://github.com/valentjn/ltex-ls)
 - [texlab - (La)TeX completion engine](https://github.com/latex-lsp/texlab)
 - [tsserver - TypeScript and JavaScript language server](https://github.com/theia-ide/typescript-language-server)
-- [volar - Vuejs language server](https://github.com/vuejs/language-tools/tree/master/packages/vue-language-server)
 - [pyright - Python language server](https://github.com/microsoft/pyright)
 - [gopls - Golang language server](https://github.com/golang/tools/tree/master/gopls)
 - [terraformls - Terraform language server](https://github.com/hashicorp/terraform-ls)

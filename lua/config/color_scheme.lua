@@ -36,6 +36,7 @@ require('catppuccin').setup({
         background = true,
       },
     },
+    neogit = true,
     neotree = true,
     noice = true,
     notify = true,

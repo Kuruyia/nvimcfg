@@ -69,8 +69,8 @@ if vim.loop.os_uname().sysname == 'Linux' then
   }
 end
 
-if lspconfig.ltex then
-  lspconfig.ltex.setup({
+if lspconfig.ltex_plus then
+  lspconfig.ltex_plus.setup({
     capabilities = capabilities,
     on_attach = on_attach,
   })

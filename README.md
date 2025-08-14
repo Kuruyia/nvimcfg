@@ -38,7 +38,7 @@ The installed and available servers can be listed with this command:
 The following language servers are configured:
 - [clangd - C++ language server](https://clangd.llvm.org/)
 - [lua_ls - Lua language server](https://github.com/luals/lua-language-server)
-- [ltex - LanguageTool language server for LaTeX and Markdown](https://github.com/valentjn/ltex-ls)
+- [ltex_plus - LanguageTool language server for LaTeX, Markdown and Typst](https://github.com/ltex-plus/ltex-ls-plus)
 - [texlab - (La)TeX completion engine](https://github.com/latex-lsp/texlab)
 - [tsserver - TypeScript and JavaScript language server](https://github.com/theia-ide/typescript-language-server)
 - [pyright - Python language server](https://github.com/microsoft/pyright)

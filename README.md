@@ -49,6 +49,7 @@ The following language servers are configured:
 - [html - HTML language server](https://github.com/hrsh7th/vscode-langservers-extracted)
 - [r_language_server - R language server](https://github.com/REditorSupport/languageserver)
 - [bufls - Protobuf language server](https://github.com/bufbuild/buf-language-server)
+- [tinymist - Typst language server](https://github.com/Myriad-Dreamin/tinymist)
 
 ## Treesitter usage
 To install syntax highlighting for a language:

@@ -166,3 +166,11 @@ if lspconfig.buf_ls then
     on_attach = on_attach,
   })
 end
+
+-- Typst
+if lspconfig.tinymist then
+  lspconfig.tinymist.setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+  })
+end

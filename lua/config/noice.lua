@@ -1,5 +1,5 @@
 -- Noice
-local excluded_lsp_client_progress_notification = { 'ltex' }
+local excluded_lsp_client_progress_notification = { 'ltex_plus' }
 
 require('noice').setup({
   cmdline = {

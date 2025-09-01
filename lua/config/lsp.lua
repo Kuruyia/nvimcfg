@@ -1,8 +1,6 @@
 -- LSP servers
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-local lspconfig = require('lspconfig')
 local mason_registry = require('mason-registry')
-local util = require('lspconfig.util')
 
 -- Disable logging
 vim.lsp.set_log_level('OFF')
@@ -15,7 +13,7 @@ end
 -- For a list of LSP servers: https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 
 -- Lua LSP server
-if lspconfig.lua_ls then
+if mason_registry.is_installed('lua-language-server') then
   local lua_ls_settings = {
     Lua = {
       telemetry = {
@@ -39,19 +37,23 @@ if lspconfig.lua_ls then
     }
   end
 
-  lspconfig.lua_ls.setup({
+  vim.lsp.config('lua_ls', {
     capabilities = capabilities,
     on_attach = on_attach,
     settings = lua_ls_settings,
   })
+
+  vim.lsp.enable('lua_ls')
 end
 
 -- C/C++ LSP server
-if lspconfig.clangd then
-  lspconfig.clangd.setup({
+if mason_registry.is_installed('clangd') then
+  vim.lsp.config('clangd', {
     capabilities = capabilities,
     on_attach = on_attach,
   })
+
+  vim.lsp.enable('clangd')
 end
 
 -- LaTeX / Markdown
@@ -69,15 +71,17 @@ if vim.loop.os_uname().sysname == 'Linux' then
   }
 end
 
-if lspconfig.ltex_plus then
-  lspconfig.ltex_plus.setup({
+if mason_registry.is_installed('ltex-ls-plus') then
+  vim.lsp.config('ltex_plus', {
     capabilities = capabilities,
     on_attach = on_attach,
   })
+
+  vim.lsp.enable('ltex_plus')
 end
 
-if lspconfig.texlab then
-  lspconfig.texlab.setup({
+if mason_registry.is_installed('texlab') then
+  vim.lsp.config('texlab', {
     capabilities = capabilities,
     on_attach = on_attach,
     settings = {
@@ -93,84 +97,106 @@ if lspconfig.texlab then
       },
     },
   })
+
+  vim.lsp.enable('texlab')
 end
 
 -- TypeScript / JavaScript
-if lspconfig.ts_ls then
-  lspconfig.ts_ls.setup({
+if mason_registry.is_installed('typescript-language-server') then
+  vim.lsp.config('ts_ls', {
     capabilities = capabilities,
     on_attach = on_attach,
   })
+
+  vim.lsp.enable('ts_ls')
 end
 
 -- Python
-if lspconfig.pyright then
-  lspconfig.pyright.setup({
+if mason_registry.is_installed('pyright') then
+  vim.lsp.config('pyright', {
     capabilities = capabilities,
     on_attach = on_attach,
   })
+
+  vim.lsp.enable('pyright')
 end
 
 -- Golang
-if lspconfig.gopls then
-  lspconfig.gopls.setup({
+if mason_registry.is_installed('gopls') then
+  vim.lsp.config('gopls', {
     capabilities = capabilities,
     on_attach = on_attach,
   })
+
+  vim.lsp.enable('gopls')
 end
 
 -- Terraform
-if lspconfig.terraformls then
-  lspconfig.terraformls.setup({
+if mason_registry.is_installed('terraformls') then
+  vim.lsp.config('terraformls', {
     capabilities = capabilities,
     on_attach = on_attach,
   })
+
+  vim.lsp.enable('terraformls')
 end
 
 -- Rust
-if lspconfig.rust_analyzer then
-  lspconfig.rust_analyzer.setup({
+if mason_registry.is_installed('rust-analyzer') then
+  vim.lsp.config('rust_analyzer', {
     capabilities = capabilities,
     on_attach = on_attach,
   })
+
+  vim.lsp.enable('rust_analyzer')
 end
 
 -- Angular
-if lspconfig.angularls then
-  lspconfig.angularls.setup({
+if mason_registry.is_installed('angular-language-server') then
+  vim.lsp.config('angularls', {
     capabilities = capabilities,
     on_attach = on_attach,
   })
+
+  vim.lsp.enable('angularls')
 end
 
 -- HTML
-if lspconfig.html then
-  lspconfig.html.setup({
+if mason_registry.is_installed('html-lsp') then
+  vim.lsp.config('html', {
     capabilities = capabilities,
     on_attach = on_attach,
   })
+
+  vim.lsp.enable('html')
 end
 
 -- R
-if lspconfig.r_language_server then
-  lspconfig.r_language_server.setup({
+if mason_registry.is_installed('r-languageserver') then
+  vim.lsp.config('r_language_server', {
     capabilities = capabilities,
     on_attach = on_attach,
   })
+
+  vim.lsp.enable('r_language_server')
 end
 
 -- Protobuf
-if lspconfig.buf_ls then
-  lspconfig.buf_ls.setup({
+if mason_registry.is_installed('buf-language-server') then
+  vim.lsp.config('buf_ls', {
     capabilities = capabilities,
     on_attach = on_attach,
   })
+
+  vim.lsp.enable('buf_ls')
 end
 
 -- Typst
-if lspconfig.tinymist then
-  lspconfig.tinymist.setup({
+if mason_registry.is_installed('tinymist') then
+  vim.lsp.config('tinymist', {
     capabilities = capabilities,
     on_attach = on_attach,
   })
+
+  vim.lsp.enable('tinymist')
 end

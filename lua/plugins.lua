@@ -122,9 +122,10 @@ require('lazy').setup({
       'hrsh7th/cmp-nvim-lsp',
       'rcarriga/nvim-notify',
     },
-    config = function()
+    -- For why `schedule_wrap` is needed, see: https://github.com/LazyVim/LazyVim/issues/6456
+    config = vim.schedule_wrap(function()
       require('config.lsp')
-    end,
+    end),
   },
 
   -- nvim-cmp

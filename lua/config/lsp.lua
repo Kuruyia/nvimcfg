@@ -151,16 +151,6 @@ if mason_registry.is_installed('rust-analyzer') then
   vim.lsp.enable('rust_analyzer')
 end
 
--- Angular
-if mason_registry.is_installed('angular-language-server') then
-  vim.lsp.config('angularls', {
-    capabilities = capabilities,
-    on_attach = on_attach,
-  })
-
-  vim.lsp.enable('angularls')
-end
-
 -- HTML
 if mason_registry.is_installed('html-lsp') then
   vim.lsp.config('html', {
@@ -169,16 +159,6 @@ if mason_registry.is_installed('html-lsp') then
   })
 
   vim.lsp.enable('html')
-end
-
--- R
-if mason_registry.is_installed('r-languageserver') then
-  vim.lsp.config('r_language_server', {
-    capabilities = capabilities,
-    on_attach = on_attach,
-  })
-
-  vim.lsp.enable('r_language_server')
 end
 
 -- Protobuf

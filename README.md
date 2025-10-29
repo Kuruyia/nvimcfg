@@ -45,9 +45,7 @@ The following language servers are configured:
 - [gopls - Golang language server](https://github.com/golang/tools/tree/master/gopls)
 - [terraformls - Terraform language server](https://github.com/hashicorp/terraform-ls)
 - [rust_analyzer - Rust language server](https://github.com/rust-analyzer/rust-analyzer)
-- [angularls - Angular language server](https://github.com/angular/vscode-ng-language-service)
 - [html - HTML language server](https://github.com/hrsh7th/vscode-langservers-extracted)
-- [r_language_server - R language server](https://github.com/REditorSupport/languageserver)
 - [bufls - Protobuf language server](https://github.com/bufbuild/buf-language-server)
 - [tinymist - Typst language server](https://github.com/Myriad-Dreamin/tinymist)
 

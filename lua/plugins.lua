@@ -157,8 +157,9 @@ require('lazy').setup({
   -- https://github.com/nvim-treesitter/nvim-treesitter
   {
     'nvim-treesitter/nvim-treesitter',
-    cmd = { 'TSUpdateSync', 'TSUpdate', 'TSInstall' },
-    event = { 'LazyFile', 'VeryLazy' },
+    branch = 'main',
+    lazy = false,
+    build = ':TSUpdate',
     config = function()
       require('config.treesitter')
     end,

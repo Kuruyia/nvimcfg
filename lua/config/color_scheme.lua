@@ -6,10 +6,7 @@ require('catppuccin').setup({
     alpha = true,
     cmp = true,
     gitsigns = true,
-    illuminate = {
-      enabled = true,
-      lsp = true,
-    },
+    illuminate = true,
     indent_blankline = {
       enabled = true,
       scope_color = 'lavender',

@@ -9,7 +9,7 @@ git clone git@github.com:Kuruyia/nvimcfg.git ~/.config/nvim
 
 Then, install some dependencies:
 ```sh
-pacman -S cmake base-devel fd ripgrep
+pacman -S cmake base-devel fd ripgrep curl tar tree-sitter-cli
 ```
 
 In Neovim, run:
@@ -27,7 +27,7 @@ rm -rf ~/.local/share/nvim/
 ## Autocompletion usage
 To install an LSP server for a language, the following command must be used:
 ```vim
-:LspInstall
+:MasonInstall
 ```
 
 The installed and available servers can be listed with this command:

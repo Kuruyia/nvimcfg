@@ -7,7 +7,7 @@ vim.lsp.log.set_level(vim.log.levels.OFF)
 
 -- For a list of LSP servers: https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 
--- Lua LSP server
+-- Lua
 if mason_registry.is_installed('lua-language-server') then
   local lua_ls_settings = {
     Lua = {
@@ -40,7 +40,7 @@ if mason_registry.is_installed('lua-language-server') then
   vim.lsp.enable('lua_ls')
 end
 
--- C/C++ LSP server
+-- C/C++
 if mason_registry.is_installed('clangd') then
   vim.lsp.config('clangd', {
     capabilities = capabilities,
@@ -102,12 +102,20 @@ if mason_registry.is_installed('typescript-language-server') then
 end
 
 -- Python
-if mason_registry.is_installed('pyright') then
-  vim.lsp.config('pyright', {
+if mason_registry.is_installed('ruff') then
+  vim.lsp.config('ruff', {
     capabilities = capabilities,
   })
 
-  vim.lsp.enable('pyright')
+  vim.lsp.enable('ruff')
+end
+
+if mason_registry.is_installed('ty') then
+  vim.lsp.config('ty', {
+    capabilities = capabilities,
+  })
+
+  vim.lsp.enable('ty')
 end
 
 -- Golang

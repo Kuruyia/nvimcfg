@@ -163,14 +163,11 @@ require('lazy').setup({
     end,
   },
 
-  -- Indent blanklines
-  -- https://github.com/lukas-reineke/indent-blankline.nvim
+  -- blink.indent
+  -- https://github.com/saghen/blink.indent
   {
-    'lukas-reineke/indent-blankline.nvim',
+    'https://github.com/saghen/blink.indent',
     event = 'LazyFile',
-    config = function()
-      require('config.indent_blanklines')
-    end,
   },
 
   -- vim-illuminate

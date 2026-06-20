@@ -5,6 +5,7 @@ require('catppuccin').setup({
   integrations = {
     alpha = true,
     blink_cmp = true,
+    blink_indent = true,
     gitsigns = true,
     illuminate = true,
     indent_blankline = {

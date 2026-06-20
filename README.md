@@ -80,7 +80,7 @@ If there is a problem with the plugin, try:
 - [blink.cmp - Completion engine](https://github.com/saghen/blink.cmp)
 - [LSP Kind - Icons for LSP](https://github.com/onsails/lspkind.nvim)
 - [Treesitter - Better syntax highlighting](https://github.com/nvim-treesitter/nvim-treesitter)
-- [Indent Blankline - Indentation guides](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [blink.indent - Indentation guides](https://github.com/saghen/blink.indent)
 - [Illuminate - Same-token highlighting](https://github.com/RRethy/vim-illuminate)
 - [Alpha - Custom greeter](https://github.com/goolord/alpha-nvim)
 - [Todo Comments - Todo highlighting and search](https://github.com/folke/todo-comments.nvim)

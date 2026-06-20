@@ -119,7 +119,7 @@ require('lazy').setup({
     dependencies = {
       'williamboman/mason.nvim',
       'williamboman/mason-lspconfig.nvim',
-      'hrsh7th/cmp-nvim-lsp',
+      'saghen/blink.cmp',
       'rcarriga/nvim-notify',
     },
     -- For why `schedule_wrap` is needed, see: https://github.com/LazyVim/LazyVim/issues/6456
@@ -128,21 +128,19 @@ require('lazy').setup({
     end),
   },
 
-  -- nvim-cmp
-  -- https://github.com/hrsh7th/nvim-cmp
+  -- blink.cmp
+  -- https://github.com/saghen/blink.cmp
   {
-    'hrsh7th/nvim-cmp',
+    'saghen/blink.cmp',
     event = 'InsertEnter',
     dependencies = {
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-buffer',
-      'hrsh7th/cmp-path',
-      'hrsh7th/cmp-cmdline',
-      'hrsh7th/cmp-vsnip',
-      'hrsh7th/vim-vsnip',
+      'rafamadriz/friendly-snippets',
+      'onsails/lspkind.nvim',
+      { 'nvim-tree/nvim-web-devicons', lazy = true },
     },
+    version = '1.*',
     config = function()
-      require('config.cmp')
+      require('config.blink_cmp')
     end,
   },
 

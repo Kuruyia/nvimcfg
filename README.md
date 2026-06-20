@@ -77,7 +77,7 @@ If there is a problem with the plugin, try:
 - [Mason - Easy installer for editor tooling](https://github.com/williamboman/mason.nvim)
 - [Mason LSP Config - Bridges Mason with LSP Config](https://github.com/williamboman/mason-lspconfig.nvim)
 - [LSP Config - Configures the LSP client](https://github.com/neovim/nvim-lspconfig)
-- [Nvim cmp - Completion engine](https://github.com/hrsh7th/nvim-cmp)
+- [blink.cmp - Completion engine](https://github.com/saghen/blink.cmp)
 - [LSP Kind - Icons for LSP](https://github.com/onsails/lspkind.nvim)
 - [Treesitter - Better syntax highlighting](https://github.com/nvim-treesitter/nvim-treesitter)
 - [Indent Blankline - Indentation guides](https://github.com/lukas-reineke/indent-blankline.nvim)

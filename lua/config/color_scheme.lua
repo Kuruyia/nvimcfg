@@ -4,7 +4,7 @@ require('catppuccin').setup({
   show_end_of_buffer = true,
   integrations = {
     alpha = true,
-    cmp = true,
+    blink_cmp = true,
     gitsigns = true,
     illuminate = true,
     indent_blankline = {

@@ -72,7 +72,7 @@ If there is a problem with the plugin, try:
 - [Lualine - Status line manager](https://github.com/nvim-lualine/lualine.nvim)
 - [Git signs - Git gutter signs](https://github.com/lewis6991/gitsigns.nvim)
 - [Telescope - Fuzzy finder](https://github.com/nvim-telescope/telescope.nvim)
-- [Autopairs - Automatically closes pairs](https://github.com/windwp/nvim-autopairs)
+- [blink.pairs - Intelligent auto-pairs with rainbow highlighting](https://github.com/saghen/blink.pairs)
 - [Nvim notify - Notification manager](https://github.com/rcarriga/nvim-notify)
 - [Mason - Easy installer for editor tooling](https://github.com/williamboman/mason.nvim)
 - [Mason LSP Config - Bridges Mason with LSP Config](https://github.com/williamboman/mason-lspconfig.nvim)

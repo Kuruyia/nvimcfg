@@ -83,11 +83,16 @@ require('lazy').setup({
     end,
   },
 
-  -- Autopairs
-  -- https://github.com/windwp/nvim-autopairs
+  -- blink.pairs
+  -- https://github.com/saghen/blink.pairs
   {
-    'windwp/nvim-autopairs',
-    event = 'InsertEnter',
+    'saghen/blink.pairs',
+    dependencies = { 'saghen/blink.lib' },
+    event = 'LazyFile',
+    version = '*',
+    build = function()
+      require('blink.pairs').download():pwait(60000)
+    end,
     config = true,
   },
 

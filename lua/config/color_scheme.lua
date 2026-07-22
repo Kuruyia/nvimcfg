@@ -2,27 +2,7 @@
 require('catppuccin').setup({
   flavour = 'macchiato',
   show_end_of_buffer = true,
-  integrations = {
-    alpha = true,
-    blink_cmp = true,
-    blink_indent = true,
-    blink_pairs = true,
-    gitsigns = true,
-    illuminate = true,
-    indent_blankline = {
-      enabled = true,
-      scope_color = 'lavender',
-      colored_indent_levels = false,
-    },
-    lsp_saga = true,
-    lsp_trouble = true,
-    mason = true,
-    neogit = true,
-    neotree = true,
-    noice = true,
-    notify = true,
-    window_picker = true,
-  },
+  auto_integrations = true,
   lsp_styles = {
     virtual_text = {
       errors = { 'italic' },

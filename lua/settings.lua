@@ -37,6 +37,7 @@ vim.keymap.set('v', 'k', 'gj')
 vim.keymap.set('v', 'j', 'gk')
 
 vim.keymap.set('n', '<C-l>', '<CMD>nohl<CR>')
+vim.keymap.set('n', '<C-s>', '<CMD>wa<CR>')
 
 vim.keymap.set('n', 'gb', '<CMD>bnext<CR>')
 vim.keymap.set('n', 'gB', '<CMD>bprevious<CR>')

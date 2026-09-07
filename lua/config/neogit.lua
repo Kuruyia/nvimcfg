@@ -9,10 +9,22 @@ require('neogit').setup({
 })
 
 -- Diffview
+local actions = require('diffview.actions')
+
 require('diffview').setup({
-  key_bindings = {
-    file_history_panel = { q = '<Cmd>DiffviewClose<CR>' },
-    file_panel = { q = '<Cmd>DiffviewClose<CR>' },
-    view = { q = '<Cmd>DiffviewClose<CR>' },
+  keymaps = {
+    file_history_panel = {
+      { 'n', 'j', actions.prev_entry },
+      { 'n', 'k', actions.next_entry },
+      { 'n', 'q', '<Cmd>DiffviewClose<CR>' },
+    },
+    file_panel = {
+      { 'n', 'j', actions.prev_entry },
+      { 'n', 'k', actions.next_entry },
+      { 'n', 'q', '<Cmd>DiffviewClose<CR>' },
+    },
+    view = {
+      { 'n', 'q', '<Cmd>DiffviewClose<CR>' },
+    },
   },
 })
